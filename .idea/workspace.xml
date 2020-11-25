@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de53cbcf-b6dc-474f-87b2-dcefc9195b8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/L-Esc-O-Bar.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="de53cbcf-b6dc-474f-87b2-dcefc9195b8c" name="Default Changelist" comment="Ajout classes du modèle">
+      <change afterPath="$PROJECT_DIR$/src/Modele/Barman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/Boisson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/Niveau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/Personne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/Verre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L_esc_o_bar.iml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +17,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kjXg99xu6fI7nMN7p6M1KGkOjJ" />
@@ -73,6 +81,14 @@
       <option name="presentableId" value="Default" />
       <updated>1606215082465</updated>
     </task>
+    <task id="LOCAL-00001" summary="Config">
+      <created>1606216060606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606216060607</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -87,5 +103,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Config" />
+    <MESSAGE value="Ajout classes du modèle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout classes du modèle" />
   </component>
 </project>
