@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de53cbcf-b6dc-474f-87b2-dcefc9195b8c" name="Default Changelist" comment="Ajout classes du modèle">
-      <change afterPath="$PROJECT_DIR$/src/Modele/Barman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modele/Boisson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modele/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modele/Niveau.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modele/Personne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modele/Verre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/Ingredient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/Soda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Boisson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Boisson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Personne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +38,7 @@
   </component>
   <component name="ProjectId" id="1kjXg99xu6fI7nMN7p6M1KGkOjJ" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Morpion" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -108,5 +112,41 @@
     <MESSAGE value="Config" />
     <MESSAGE value="Ajout classes du modèle" />
     <option name="LAST_COMMIT_MESSAGE" value="Ajout classes du modèle" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Modele/Commande.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Modele/Commande.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Modele/Commande.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Modele/Commande.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Modele/Commande.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Modele/Commande.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,7 +1,7 @@
 package Modele;
 
-public class Boisson {
+public abstract class Boisson {
 
-    private Verre verre;
+    private boolean servi = false;
 
 }
