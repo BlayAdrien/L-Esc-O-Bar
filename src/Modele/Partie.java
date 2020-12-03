@@ -8,16 +8,19 @@ public class Partie {
 
     private int meilleurScore;
 
-    private ArrayList<Commande> commandes = new ArrayList<>();
+    private Commande commande;
 
     public Partie(int meilleurScore) {
         this.meilleurScore = meilleurScore;
     }
 
     public void genererCommandes(){
-        for (int i = 0; i < 6; i++) {
-            commandes.add(new Commande().genererCommande());
-        }
+            commande = (new Commande().genererCommande());
+    }
+
+
+    public Commande getCommande() {
+        return commande;
     }
 
     public int getScore() {
@@ -41,7 +44,7 @@ public class Partie {
         return "Partie{" +
                 "score=" + score +
                 ", meilleurScore=" + meilleurScore +
-                ", commandes=" + commandes +
+                ", commandes=" + commande +
                 '}';
     }
 }

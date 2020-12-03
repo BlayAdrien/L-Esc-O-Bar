@@ -10,6 +10,8 @@ public class Biere extends Boisson{
 
     private Verre verre;
 
+    private static final int valeur = 10;
+
     public Biere(choixBiere typeBiere) {
         this.typeBiere = typeBiere;
     }
@@ -20,4 +22,6 @@ public class Biere extends Boisson{
                 "typeBiere=" + typeBiere +
                 '}';
     }
+
+
 }
