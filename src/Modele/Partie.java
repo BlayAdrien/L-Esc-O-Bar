@@ -1,16 +1,26 @@
 package Modele;
 
+import java.util.ArrayList;
+
 public class Partie {
 
     private int score = 0;
 
     private int meilleurScore;
 
-    private Niveau niveau;
+    private Commande commande;
 
-    public Partie(int meilleurScore, Niveau niveau) {
+    public Partie(int meilleurScore) {
         this.meilleurScore = meilleurScore;
-        this.niveau = niveau;
+    }
+
+    public void genererCommandes(){
+            commande = (new Commande().genererCommande());
+    }
+
+
+    public Commande getCommande() {
+        return commande;
     }
 
     public int getScore() {
@@ -29,11 +39,12 @@ public class Partie {
         this.meilleurScore = meilleurScore;
     }
 
-    public Niveau getNiveau() {
-        return niveau;
-    }
-
-    public void setNiveau(Niveau niveau) {
-        this.niveau = niveau;
+    @Override
+    public String toString() {
+        return "Partie{" +
+                "score=" + score +
+                ", meilleurScore=" + meilleurScore +
+                ", commandes=" + commande +
+                '}';
     }
 }
