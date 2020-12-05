@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</AnchorPane>
-
+<ScrollPane prefHeight="464.0" prefWidth="673.0" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
+     <content>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="655.0" text="Règles du jeu" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefWidth="650.0" text="&#10;Dans ce jeu, nous incarnons un Barman qui devra gérer les commandes de différents clients dans un temps imparti. &#10;Le but du jeu est de servir un maximum de clients pour augmenter son score. La partie est gagné si un certain score est atteint avant la fin de la partie.&#10;&#10;Le jeu se décompose en 3 niveaux:&#10;&#10;Niveau Facile : Le client pourra commander 3 types de boissons simple :&#10;&#9;Soda&#10;&#9;Bière blonde&#10;&#9;Bière brune&#10;Pour sélectionner un soda il faut appuyer sur le réfrigérateur représenté dans le bar.&#10;Pour les bières, il faudra appuyer sur le gobelet et par la suite sur la tireuse enquestion (Blonde-&gt; Beige ou Brune-&gt; Marron), attendre 5 secondes et ensuitela servir au client.&#10;&#10;Niveau Normal: Le même principe que le niveau Facile mais avec moins de tempspar client.&#10;&#10;Niveau Difficile: Le client commandera des boissons simple et des cocktails :&#10;&#9;Boissons simple (Soda, Bière blonde et brune)&#10;&#9;Cocktail : Mojito&#10;&#9;Cocktail : Margarita&#10;&#10;Pour servir un cocktail il fadura procéder à plusieurs étapes : &#10;&#10;&#9;Mojito:&#10;Versez les feuilles de menthe dans le shaker&#10;Ajoutez le citron dans le shaker&#10;Ajoutez la glace pilée dans le shaker&#10;Incorporez l'alcool (Rhum) dans le shaker&#10;Sélectionnez le verre pour Mojito&#10;Incorporez du shaker au verre&#10;Servir au client&#10;&#10;&#9;Margarita:&#10;Ajoutez le citron dans le shaker&#10;Ajoutez la glace pilée dans le shaker&#10;Incorporez l'alcool (Téquila) dans le shaker&#10;Sélectionnez le verre pour Margarita&#10;Incorporez du shaker au verre&#10;Servir au client" wrapText="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="5.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
