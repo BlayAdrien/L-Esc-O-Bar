@@ -1,22 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="464.0" prefWidth="673.0" xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml">
+<ScrollPane fx:controller="Controller.RegleDuJeu" prefHeight="464.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
      <content>
             <VBox>
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="655.0" text="Règles du jeu" textAlignment="CENTER">
+            <HBox alignment="TOP_RIGHT" prefHeight="9.0" prefWidth="657.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnFr" text="FR" />
+                  <Button mnemonicParsing="false" onAction="#btnEn" text="EN" />
+                  <Label alignment="BOTTOM_CENTER" text="Retour à l'accueil">
+                     <HBox.margin>
+                        <Insets left="10.0" right="1.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="closeButton" onAction="#retourAccueil" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../ressources/img/fleche.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+            </HBox>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="655.0" fx:id="rules" text="Règles du jeu" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold Italic" size="20.0" />
                      </font>
                   </Label>
-                  <Label prefWidth="650.0" text="&#10;Dans ce jeu, nous incarnons un Barman qui devra gérer les commandes de différents clients dans un temps imparti. &#10;Le but du jeu est de servir un maximum de clients pour augmenter son score. La partie est gagné si un certain score est atteint avant la fin de la partie.&#10;&#10;Le jeu se décompose en 3 niveaux:&#10;&#10;Niveau Facile : Le client pourra commander 3 types de boissons simple :&#10;&#9;Soda&#10;&#9;Bière blonde&#10;&#9;Bière brune&#10;Pour sélectionner un soda il faut appuyer sur le réfrigérateur représenté dans le bar.&#10;Pour les bières, il faudra appuyer sur le gobelet et par la suite sur la tireuse enquestion (Blonde-&gt; Beige ou Brune-&gt; Marron), attendre 5 secondes et ensuitela servir au client.&#10;&#10;Niveau Normal: Le même principe que le niveau Facile mais avec moins de tempspar client.&#10;&#10;Niveau Difficile: Le client commandera des boissons simple et des cocktails :&#10;&#9;Boissons simple (Soda, Bière blonde et brune)&#10;&#9;Cocktail : Mojito&#10;&#9;Cocktail : Margarita&#10;&#10;Pour servir un cocktail il fadura procéder à plusieurs étapes : &#10;&#10;&#9;Mojito:&#10;Versez les feuilles de menthe dans le shaker&#10;Ajoutez le citron dans le shaker&#10;Ajoutez la glace pilée dans le shaker&#10;Incorporez l'alcool (Rhum) dans le shaker&#10;Sélectionnez le verre pour Mojito&#10;Incorporez du shaker au verre&#10;Servir au client&#10;&#10;&#9;Margarita:&#10;Ajoutez le citron dans le shaker&#10;Ajoutez la glace pilée dans le shaker&#10;Incorporez l'alcool (Téquila) dans le shaker&#10;Sélectionnez le verre pour Margarita&#10;Incorporez du shaker au verre&#10;Servir au client" wrapText="true">
+                  <Label fx:id="description" prefWidth="650.0" text="Dans ce jeu, nous incarnons un Barman qui devra gérer les commandes de différents clients dans un temps imparti.&#10;&#10;Le but du jeu est de servir un maximum de clients pour augmenter son score. La partie est gagné si un certain score est atteint avant la fin de la partie.&#10;&#10;Le jeu se décompose en 3 niveaux:&#10;&#10;&#9;Niveau Facile : &#10;Le client pourra commander 3 types de boissons simple :&#10;&#9;Soda&#10;&#9;Bière blonde&#10;&#9;Bière brune&#10;Pour sélectionner un soda il faut appuyer sur le réfrigérateur représenté dans le bar.&#10;Pour les bières, il faudra appuyer sur le gobelet et par la suite sur la tireuse enquestion (Blonde Beige ou Brune Marron), attendre 5 secondes et ensuite la servir au client.&#10;&#10;&#9;Niveau Normal: Le même principe que le niveau Facile mais avec moins de temps par client.&#10;&#10;&#9;Niveau Difficile: &#10;Le client commandera des boissons simple et des cocktails :&#10;&#9;Boissons simple (Soda, Bière blonde et brune)&#10;&#9;Cocktail : Mojito&#10;&#9;Cocktail : Margarita&#10;Pour servir un cocktail il fadura procéder à plusieurs étapes : &#10;&#10;&#9;Mojito:&#10;Versez les feuilles de menthe dans le shaker&#10;Ajoutez le citron dans le shaker&#10;Ajoutez la glace pilée dans le shaker&#10;Incorporez l'alcool (Rhum) dans le shaker&#10;Sélectionnez le verre pour Mojito&#10;Incorporez du shaker au verre&#10;Servir au client&#10;&#10;&#9;Margarita:&#10;Ajoutez le citron dans le shaker&#10;Ajoutez la glace pilée dans le shaker&#10;Incorporez l'alcool (Téquila) dans le shaker&#10;Sélectionnez le verre pour Margarita&#10;Incorporez du shaker au verre&#10;Servir au client" wrapText="true">
                      <font>
                         <Font size="13.0" />
                      </font>
