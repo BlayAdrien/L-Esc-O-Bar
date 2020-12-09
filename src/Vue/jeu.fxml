@@ -9,17 +9,23 @@
       <ListView fx:id="listCommande" prefHeight="200.0" prefWidth="200.0" />
       <ImageView fx:id="biereBlonde" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../ressources/img/biere_blonde.jpg" />
+            <Image url="@../Controller/img/biere_blonde.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="biereBrune" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../ressources/img/biere_brune.jpg" />
+            <Image url="@../Controller/img/biere_brune.jpg" />
          </image></ImageView>
       <ImageView fx:id="soda" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../ressources/img/soda.jpg" />
+            <Image url="@../Controller/img/soda.jpg" />
          </image></ImageView>
+      <ImageView fx:id="cocktail" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Controller/img/mojito.jpg" />
+         </image>
+      </ImageView>
       <Button fx:id="newCommande" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#setButtonClick" text="NouvelleCommande" />
+      <Label fx:id="score" />
    </children>
 </VBox>

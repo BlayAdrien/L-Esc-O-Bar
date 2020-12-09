@@ -1,10 +1,13 @@
 package Modele;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+
 import java.util.ArrayList;
 
 public class Partie {
 
-    private int score = 0;
+    private final IntegerProperty score = new SimpleIntegerProperty();
 
     private int meilleurScore;
 
@@ -23,13 +26,9 @@ public class Partie {
         return commande;
     }
 
-    public int getScore() {
-        return score;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
-    }
+    public Integer getScore() {return score.get();}
+    public IntegerProperty scoreProperty() {return score;}
+    public void setScore(Integer score) {this.score.set(score);}
 
     public int getMeilleurScore() {
         return meilleurScore;

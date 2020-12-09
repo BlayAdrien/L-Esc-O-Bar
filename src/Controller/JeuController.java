@@ -4,13 +4,17 @@ import Modele.Biere;
 import Modele.Boisson;
 import Modele.Cocktail;
 import Modele.Soda;
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Orientation;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
@@ -36,22 +40,28 @@ public class JeuController implements Initializable {
     Button newCommande;
 
     @FXML
+    Label score;
+
+    @FXML
     ListView<String> listCommande;
 
     ObservableList observableList = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        score.textProperty().bind(Bindings.convert(Main.p.scoreProperty()));
         setListCommande();
     }
 
     public void setListCommande(){
-        observableList.removeAll(observableList);
+        observableList.clear();
+        listCommande.setOrientation(Orientation.HORIZONTAL);
         for (Boisson boisson: Main.p.getCommande().getCommande()
              ) {
             observableList.add(boisson.toString());
         }
-    listCommande.getItems().addAll(observableList);
+
+    listCommande.setItems(observableList);
 
     }
 
@@ -64,11 +74,14 @@ public class JeuController implements Initializable {
     public void servir(Boisson b){
         for (Boisson  boisson :  Main.p.getCommande().getCommande()) {
                 if (boisson.equals(b) && !boisson.isPrepare()){
-                    System.out.println("test");
                     boisson.setPrepare(true);
+                    System.out.println(boisson.getClass());
+                    System.out.println(Main.p.getScore());
+                    Main.p.setScore(Main.p.getScore() + boisson.getScore());
                     break;
                 }
         }
+
     }
 
     public void setOnCliked(MouseEvent event){
