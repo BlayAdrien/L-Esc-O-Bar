@@ -8,7 +8,15 @@ public class Soda extends Boisson {
 
     private static final int valeur = 10;
 
+    private static final String img = "img/soda.jpg";
+
+
     public Soda() {
+    }
+
+    @Override
+    public String imgPath() {
+        return img;
     }
 
     @Override
@@ -16,6 +24,11 @@ public class Soda extends Boisson {
         return "Soda{" +
                 "nom='" + nom + '\'' +
                 '}';
+    }
+
+    @Override
+    public int getScore(){
+        return valeur;
     }
 
     @Override

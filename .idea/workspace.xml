@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de53cbcf-b6dc-474f-87b2-dcefc9195b8c" name="Default Changelist" comment="Generateur de commande aleatoires + debut interface de jeu">
-      <change afterPath="$PROJECT_DIR$/ressources/img/biere_blonde.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/img/biere_brune.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/img/mojito.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/img/soda.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/JeuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vue/JeuView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vue/jeu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/L-Esc-O-Bar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/L-Esc-O-Bar.iml" afterDir="false" />
+    <list default="true" id="de53cbcf-b6dc-474f-87b2-dcefc9195b8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contrat.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Diagramme Activité.mdj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Diagramme de séquence.mdj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Biere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Boisson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Boisson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Soda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Soda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diagramme de classe.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Diagramme de classe.mdj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,6 +42,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Controller" />
       <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Vue" />
       <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\sample" />
     </key>
@@ -109,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606994838303</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Generateur de commande aleatoires + debut interface de jeu">
+      <created>1607012991644</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607012991644</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Possibilite de servir la commande en cours + incrementation du score">
+      <created>1607539946762</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607539946763</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,22 +137,7 @@
     <MESSAGE value="Ajout classes du modèle" />
     <MESSAGE value="Generateur de commande aleatoires" />
     <MESSAGE value="Generateur de commande aleatoires + debut interface de jeu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generateur de commande aleatoires + debut interface de jeu" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller/JeuController.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller/JeuController.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Possibilite de servir la commande en cours + incrementation du score" />
+    <option name="LAST_COMMIT_MESSAGE" value="Possibilite de servir la commande en cours + incrementation du score" />
   </component>
 </project>
