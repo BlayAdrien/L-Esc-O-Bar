@@ -1,0 +1,10 @@
+.table {
+	-fx-background-image : url("../Controller/img/fond.png");
+	-fx-pref-width : 750px;
+	-fx-pref-height : 406px;
+	-fx-background-size : cover;
+}
+
+.button {
+	-fx-background-color : transparent;
+}

@@ -56,10 +56,11 @@ public class Accueil {
 
 	@FXML
 	private void jouer() throws IOException {
-        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/jeu.fxml")));
+        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
         Stage newFenetre = new Stage();
         newFenetre.setScene(Scene);
         newFenetre.initOwner(Main.getPrimaryStage());
+        newFenetre.setResizable(false);
         newFenetre.show();
     }
 
@@ -69,6 +70,7 @@ public class Accueil {
         Stage newFenetre = new Stage();
         newFenetre.setScene(Scene);
         newFenetre.initOwner(Main.getPrimaryStage());
+        newFenetre.setResizable(false);
         newFenetre.show();
     }
 }

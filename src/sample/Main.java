@@ -19,6 +19,7 @@ public class Main extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("../Vue/Accueil.fxml"));
             primaryStage.setTitle("L'Esc O Bar");
             primaryStage.setScene(new Scene(root));
+            primaryStage.setResizable(false);
             primaryStage.show();
         }catch(Exception e) {
             e.printStackTrace();
