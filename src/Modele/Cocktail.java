@@ -9,7 +9,7 @@ public class Cocktail extends Boisson implements VerreInterface{
 
     private static final int valeur = 30;
 
-    private String nom = "Cocktail";
+    private String name = "Cocktail";
 
     private Verre verre;
 
@@ -18,8 +18,17 @@ public class Cocktail extends Boisson implements VerreInterface{
     public Cocktail() {
     }
 
+
     public Cocktail(Verre verre) {
         this.verre = verre;
+    }
+
+    public void addIngredient(Ingredient ingredient){
+        ingredients.add(ingredient);
+    }
+
+    public ArrayList<Ingredient> getIngredients() {
+        return ingredients;
     }
 
     @Override
@@ -30,13 +39,18 @@ public class Cocktail extends Boisson implements VerreInterface{
     @Override
     public String toString() {
         return "Cocktail{" +
-                "nom='" + nom + '\'' +
+                "nom='" + name + '\'' +
                 '}';
     }
 
     @Override
     public int getScore(){
         return valeur;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
 
@@ -46,8 +60,10 @@ public class Cocktail extends Boisson implements VerreInterface{
         if (o == null || getClass() != o.getClass()) return false;
         Cocktail cocktail = (Cocktail) o;
         return Objects.equals(ingredients, cocktail.ingredients) &&
-                Objects.equals(nom, cocktail.nom);
+                Objects.equals(name, cocktail.name);
     }
+
+
 
     @Override
     public boolean verifVerre() {

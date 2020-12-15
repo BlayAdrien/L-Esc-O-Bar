@@ -59,7 +59,6 @@ public class Accueil {
 		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
        	stage.setScene(Scene);
-
         stage.show();
 
     }

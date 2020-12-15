@@ -15,6 +15,8 @@ public abstract class Boisson {
 
     public abstract int getScore();
 
+    public abstract String getName();
+
     public abstract boolean equals(Object o);
 
     public abstract String imgPath();

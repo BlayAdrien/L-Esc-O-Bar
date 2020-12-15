@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba1ca0c4-a1dd-400f-b90e-3b9773516097" name="Default Changelist" comment="">
+    <list default="true" id="ba1ca0c4-a1dd-400f-b90e-3b9773516097" name="Default Changelist" comment="Possibilite de servir la commande en cours + incrementation du score">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Accueil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/JeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JeuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Biere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Boisson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Boisson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Soda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Soda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +48,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Controller\img" />
       <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Controller" />
       <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Vue" />
       <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\sample" />
@@ -137,21 +146,5 @@
     <MESSAGE value="Generateur de commande aleatoires + debut interface de jeu" />
     <MESSAGE value="Possibilite de servir la commande en cours + incrementation du score" />
     <option name="LAST_COMMIT_MESSAGE" value="Possibilite de servir la commande en cours + incrementation du score" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller/JeuController.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller/JeuController.java</url>
-          <line>112</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

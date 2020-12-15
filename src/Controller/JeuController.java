@@ -56,10 +56,11 @@ public class JeuController implements Initializable {
     ListView<String> listCommande;
 
     @FXML
-    ListView<Boisson> commandeEnCours;
+    ListView<String> listIngredients;
+
+    ObservableList observableIngredients = FXCollections.observableArrayList();
 
     ObservableList observableList = FXCollections.observableArrayList();
-    ObservableList listEnCours = FXCollections.observableArrayList();
 
 
     @Override
@@ -76,16 +77,66 @@ public class JeuController implements Initializable {
 
     public void setListCommande(){
         observableList.clear();
-        listEnCours.clear();
         listCommande.setOrientation(Orientation.HORIZONTAL);
         //commandeEnCours.setOrientation(Orientation.HORIZONTAL);
         for (Boisson boisson: Main.p.getCommande().getCommande()
              ) {
-            observableList.add(boisson.toString());
+            if (!boisson.isPrepare()){
+                observableList.add(boisson.getName());
+            }
         }
 
-    listCommande.setItems(observableList);
+        listCommande.setItems(observableList);
+        listCommande.setCellFactory(param -> new ListCell<String>() {
+            private ImageView imageView = new ImageView();
 
+            private Image image;
+            @Override
+            public void updateItem(String name, boolean empty) {
+                super.updateItem(name,empty);
+                if (empty) {
+                    setText(null);
+                    setGraphic(null);
+                }
+                else{
+                    switch (name){
+                        case "BiereBlonde" :
+                            image = new Image(getClass().getResource("img/biere_blonde.jpg").toExternalForm());
+                            imageView.setImage(image);
+                            break;
+                        case "BiereBrune" :
+                            image = new Image(getClass().getResource("img/biere_brune.jpg").toExternalForm());
+                            imageView.setImage(image);
+                            break;
+                        case "Soda" :
+                            image = new Image(getClass().getResource("img/soda.jpg").toExternalForm());
+                            imageView.setImage(image);
+                            break;
+                        case "Cocktail" :
+                            image = new Image(getClass().getResource("img/mojito.jpg").toExternalForm());
+                            imageView.setImage(image);
+                            break;
+                    }
+                    imageView.setFitHeight(100);
+                    imageView.setPreserveRatio(true);
+                    setGraphic(imageView);
+                }
+            }
+        });
+    }
+
+    public void setListIngredients(){
+        observableIngredients.clear();
+        for (Boisson b: Main.p.getCommandeEnCours().getCommande()
+             ) {
+            if (b instanceof Cocktail){
+                for (Ingredient i : ((Cocktail)b).getIngredients()
+                     ) {
+                    observableIngredients.add(i.toString());
+                }
+            }
+        }
+        listCommande.setItems(observableIngredients);
     }
 
 
@@ -94,16 +145,14 @@ public class JeuController implements Initializable {
                 if (boisson.equals(b) && !boisson.isPrepare()){
                     boisson.setPrepare(true);
                     Main.p.setScore(Main.p.getScore() + boisson.getScore());
-                    listEnCours.add(boisson);
                     if (Main.p.getCommande().verifCommande()){
                         Main.p.genererCommandes();
-                        listCommande.getItems().clear();
-                        setListCommande();
                     }
                     break;
                 }
         }
-        commandeEnCours.setItems(listEnCours);
+        listCommande.getItems().clear();
+        setListCommande();
     }
 
     public void clicVerre(MouseEvent event){
@@ -118,6 +167,16 @@ public class JeuController implements Initializable {
         }
     }
 
+    public void clicIngredient(MouseEvent event){
+        ImageView selectIngredient = (ImageView)event.getSource();
+        switch (selectIngredient.getId()){
+            case "citron":
+                Main.p.getCommandeEnCours().getCommande().add(new Cocktail());
+               // .addIngredient(new Ingredient(Ingredient.TypeIngredient.CITRON))
+
+        }
+
+    }
 
 
     public void setOnCliked(MouseEvent event){

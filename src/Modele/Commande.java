@@ -50,6 +50,7 @@ public class Commande{
                     break;
             }
         }
+
         return this;
     }
 

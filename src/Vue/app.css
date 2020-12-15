@@ -1,7 +1,7 @@
 .table {
 	-fx-background-image : url("../Controller/img/fond.png");
-	-fx-pref-width : 750px;
-	-fx-pref-height : 406px;
+	-fx-pref-width : 1100px;
+    -fx-pref-height : 600px;
 	-fx-background-size : cover;
 }
 

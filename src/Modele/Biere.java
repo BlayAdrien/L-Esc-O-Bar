@@ -13,12 +13,20 @@ public class Biere extends Boisson implements VerreInterface{
 
     private Verre verre;
 
+    private String name;
+
     private static final int valeur = 10;
 
     private static final String img = "../img/biere_blonde.jpg";
 
     public Biere(choixBiere typeBiere) {
         this.typeBiere = typeBiere;
+        if (typeBiere == choixBiere.BLONDE){
+            this.name = "BiereBlonde";
+        }
+        if (typeBiere == choixBiere.BRUNE){
+            this.name = "BiereBrune";
+        }
     }
 
     public Biere(Verre verre) {
@@ -27,6 +35,12 @@ public class Biere extends Boisson implements VerreInterface{
 
     public void setTypeBiere(choixBiere typeBiere) {
         this.typeBiere = typeBiere;
+        if (typeBiere == choixBiere.BLONDE){
+            this.name = "BiereBlonde";
+        }
+        if (typeBiere == choixBiere.BRUNE){
+            this.name = "BiereBrune";
+        }
     }
 
     @Override
@@ -49,6 +63,11 @@ public class Biere extends Boisson implements VerreInterface{
     @Override
     public int getScore(){
         return valeur;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
 
