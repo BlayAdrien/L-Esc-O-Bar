@@ -64,8 +64,8 @@ public class JeuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        score.textProperty().bind(Bindings.convert(Main.p.scoreProperty()));
-        tpsPartie.textProperty().bind(Bindings.convert(Main.p.tpsPartieProperty()));
+        //score.textProperty().bind(Bindings.convert(Main.p.scoreProperty()));
+       // tpsPartie.textProperty().bind(Bindings.convert(Main.p.tpsPartieProperty()));
         try {
             chrono();
         } catch (IOException e) {
@@ -78,7 +78,7 @@ public class JeuController implements Initializable {
         observableList.clear();
         listEnCours.clear();
         listCommande.setOrientation(Orientation.HORIZONTAL);
-        commandeEnCours.setOrientation(Orientation.HORIZONTAL);
+        //commandeEnCours.setOrientation(Orientation.HORIZONTAL);
         for (Boisson boisson: Main.p.getCommande().getCommande()
              ) {
             observableList.add(boisson.toString());
