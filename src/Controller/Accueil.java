@@ -55,13 +55,17 @@ public class Accueil {
     }
 
 	@FXML
-	private void jouer() throws IOException {
-        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
-        Stage newFenetre = new Stage();
-        newFenetre.setScene(Scene);
-        newFenetre.initOwner(Main.getPrimaryStage());
-        newFenetre.setResizable(false);
-        newFenetre.show();
+	private void jouer(ActionEvent event) throws IOException {
+		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/jeu.fxml")));
+       	stage.setScene(Scene);
+        stage.show();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+			@Override
+			public void handle(WindowEvent windowEvent) {
+
+			}
+		});
     }
 
 	@FXML

@@ -2,28 +2,22 @@ package Modele;
 
 public class Verre {
 
-    private String forme;
-
-    private Double contenance;
-
-    public Verre(String forme, Double contenance) {
-        this.forme = forme;
-        this.contenance = contenance;
+    public enum  typeVerre{
+        CYLINDRE, ENV
     }
 
-    public String getForme() {
-        return forme;
+    private typeVerre type;
+
+
+    public Verre(typeVerre type) {
+        this.type = type;
     }
 
-    public void setForme(String forme) {
-        this.forme = forme;
+    public typeVerre getType() {
+        return type;
     }
 
-    public Double getContenance() {
-        return contenance;
-    }
-
-    public void setContenance(Double contenance) {
-        this.contenance = contenance;
+    public void setType(typeVerre type) {
+        this.type = type;
     }
 }

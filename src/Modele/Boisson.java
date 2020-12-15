@@ -5,7 +5,6 @@ public abstract class Boisson {
     private boolean prepare = false;
 
 
-
     public boolean isPrepare() {
         return prepare;
     }
