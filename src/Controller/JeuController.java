@@ -170,7 +170,7 @@ public class JeuController implements Initializable {
             public void handle(ActionEvent actionEvent) {
                 Main.p.setTpsPartie(Main.p.getTpsPartie() - 1 );
                     if (Main.p.getTpsPartie() == 0){
-                            
+
                             temps.stop();
 
 
