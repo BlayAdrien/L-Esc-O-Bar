@@ -1,9 +1,9 @@
 package Modele;
 
-import java.util.ArrayList;
-import java.util.Objects;
+        import java.util.ArrayList;
+        import java.util.Objects;
 
-public class Cocktail extends Boisson {
+public class Cocktail extends Boisson implements VerreInterface{
 
     private ArrayList<Ingredient> ingredients = new ArrayList<>();
 
@@ -11,7 +11,16 @@ public class Cocktail extends Boisson {
 
     private String nom = "Cocktail";
 
+    private Verre verre;
+
     private static final String img = "img/mojito.jpg";
+
+    public Cocktail() {
+    }
+
+    public Cocktail(Verre verre) {
+        this.verre = verre;
+    }
 
     @Override
     public String imgPath() {
@@ -40,4 +49,8 @@ public class Cocktail extends Boisson {
                 Objects.equals(nom, cocktail.nom);
     }
 
+    @Override
+    public boolean verifVerre() {
+        return ( verre.getType() == Verre.typeVerre.ENV);
+    }
 }

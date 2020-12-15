@@ -53,6 +53,18 @@ public class Commande{
         return this;
     }
 
+    public boolean verifCommande(){
+        boolean prete = true;
+        for (Boisson boisson : commande
+             ) {
+            if(!boisson.isPrepare()){
+                prete = false;
+                break;
+            }
+        }
+        return prete;
+    }
+
 
     public void addBoisson(Boisson boisson){
         this.commande.add(boisson);

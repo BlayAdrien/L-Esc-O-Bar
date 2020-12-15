@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de53cbcf-b6dc-474f-87b2-dcefc9195b8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contrat.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Diagramme Activité.mdj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Diagramme de séquence.mdj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FinController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/img/verre-biere.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/img/verre-cocktail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/VerreInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Vue/Fin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diagramme de classe.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Diagramme de classe.mdj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Accueil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/JeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JeuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Biere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Boisson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Boisson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Verre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Verre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/jeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/jeu.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +29,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>

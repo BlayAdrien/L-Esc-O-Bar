@@ -2,8 +2,7 @@ package Modele;
 
 import java.util.Objects;
 
-public class Biere extends Boisson{
-
+public class Biere extends Boisson implements VerreInterface{
 
 
     public enum  choixBiere{
@@ -22,9 +21,22 @@ public class Biere extends Boisson{
         this.typeBiere = typeBiere;
     }
 
+    public Biere(Verre verre) {
+        this.verre = verre;
+    }
+
+    public void setTypeBiere(choixBiere typeBiere) {
+        this.typeBiere = typeBiere;
+    }
+
     @Override
     public String imgPath() {
         return img;
+    }
+
+    @Override
+    public boolean verifVerre() {
+        return (verre.getType() == Verre.typeVerre.CYLINDRE);
     }
 
     @Override
