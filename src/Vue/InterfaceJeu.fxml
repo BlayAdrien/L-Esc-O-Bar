@@ -21,62 +21,31 @@
          <children>
             <HBox prefHeight="150.0" prefWidth="220.0">
                <children>
-                  <ImageView fitHeight="110.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="shaker" fitHeight="110.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Controller/img/shaker.png" />
                      </image>
                   </ImageView>
-                  <Button mnemonicParsing="false" stylesheets="@app.css">
-                     <font>
-                        <Font size="1.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="122.0" stylesheets="@app.css">
-                     <graphic>
-                        <ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Controller/img/rhum.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="1.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets bottom="40.0" left="20.0" />
-                     </HBox.margin>
-                     <padding>
-                        <Insets bottom="-10.0" left="-30.0" right="-40.0" />
-                     </padding>
-                  </Button>
-                  <Button mnemonicParsing="false" stylesheets="@app.css">
-                     <graphic>
-                        <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Controller/img/tequila.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="1.0" />
-                     </font>
-                     <padding>
-                        <Insets left="-20.0" right="-20.0" />
-                     </padding>
-                     <HBox.margin>
-                        <Insets left="8.0" top="13.0" />
-                     </HBox.margin>
-                  </Button>
+                  <ImageView fx:id="rhum" fitHeight="120.0" fitWidth="150.0" onMouseClicked="#clicIngredient" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Controller/img/rhum.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="tequila" fitHeight="100.0" fitWidth="200.0" onMouseClicked="#clicIngredient" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Controller/img/tequila.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="biereBlonde" fitHeight="100.0" fitWidth="150.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Controller/img/tireuse.png" />
+                     </image>
+                  </ImageView>
                </children>
                <HBox.margin>
                   <Insets left="100.0" />
                </HBox.margin>
             </HBox>
-            <ImageView fx:id="biereBlonde" fitHeight="100.0" fitWidth="150.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Controller/img/tireuse.png" />
-               </image>
-            </ImageView>
          </children>
          <GridPane.margin>
             <Insets />
@@ -98,7 +67,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <ImageView fx:id="citron" fitHeight="150.0" fitWidth="65.0" onMouseClicked="#clicIngredient" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <image>
                         <Image url="@../Controller/img/lemon.png" />
                      </image>
@@ -113,12 +82,12 @@
                         <Image url="@../Controller/img/cocktail.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <ImageView fx:id="menthe" fitHeight="150.0" fitWidth="63.0" onMouseClicked="#clicIngredient" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <image>
                         <Image url="@../Controller/img/menthe.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                  <ImageView fx:id="glace" fitHeight="150.0" fitWidth="90.0" onMouseClicked="#clicIngredient" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                      <image>
                         <Image url="@../Controller/img/ice.png" />
                      </image>

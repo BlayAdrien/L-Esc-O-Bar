@@ -4,6 +4,14 @@ public abstract class Boisson {
 
     private boolean prepare = false;
 
+    private String name;
+
+    public Boisson() {
+    }
+
+    public Boisson(String name) {
+        this.name = name;
+    }
 
     public boolean isPrepare() {
         return prepare;
@@ -15,7 +23,13 @@ public abstract class Boisson {
 
     public abstract int getScore();
 
-    public abstract String getName();
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public  String getName(){
+        return name;
+    }
 
     public abstract boolean equals(Object o);
 

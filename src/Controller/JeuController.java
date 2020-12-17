@@ -78,6 +78,8 @@ public class JeuController implements Initializable {
     public void setListCommande(){
         observableList.clear();
         listCommande.setOrientation(Orientation.HORIZONTAL);
+        //listCommande.setMouseTransparent(true);
+        listCommande.setFocusTraversable(false);
         //commandeEnCours.setOrientation(Orientation.HORIZONTAL);
         for (Boisson boisson: Main.p.getCommande().getCommande()
              ) {
@@ -100,11 +102,11 @@ public class JeuController implements Initializable {
                 }
                 else{
                     switch (name){
-                        case "BiereBlonde" :
+                        case "BLONDE" :
                             image = new Image(getClass().getResource("img/biere_blonde.jpg").toExternalForm());
                             imageView.setImage(image);
                             break;
-                        case "BiereBrune" :
+                        case "BRUNE" :
                             image = new Image(getClass().getResource("img/biere_brune.jpg").toExternalForm());
                             imageView.setImage(image);
                             break;
@@ -112,10 +114,15 @@ public class JeuController implements Initializable {
                             image = new Image(getClass().getResource("img/soda.jpg").toExternalForm());
                             imageView.setImage(image);
                             break;
-                        case "Cocktail" :
+                        case "MOJITO" :
                             image = new Image(getClass().getResource("img/mojito.jpg").toExternalForm());
                             imageView.setImage(image);
                             break;
+                        case"MARGARITA" :
+                            image = new Image(getClass().getResource("img/margarita.jpg").toExternalForm());
+                            imageView.setImage(image);
+                            break;
+
                     }
                     imageView.setFitHeight(100);
                     imageView.setPreserveRatio(true);
@@ -136,7 +143,7 @@ public class JeuController implements Initializable {
                 }
             }
         }
-        listCommande.setItems(observableIngredients);
+        listIngredients.setItems(observableIngredients);
     }
 
 
@@ -162,20 +169,76 @@ public class JeuController implements Initializable {
                 Main.p.getCommandeEnCours().addBoisson(new Biere(new Verre(Verre.typeVerre.CYLINDRE)));
                 break;
             case "verreCocktail" :
-                Main.p.getCommandeEnCours().addBoisson(new Cocktail(new Verre(Verre.typeVerre.ENV)));
+                servir(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO));
                 break;
         }
     }
 
+
+
     public void clicIngredient(MouseEvent event){
         ImageView selectIngredient = (ImageView)event.getSource();
+        Cocktail cocktail;
         switch (selectIngredient.getId()){
             case "citron":
-                Main.p.getCommandeEnCours().getCommande().add(new Cocktail());
+                if (!Main.p.isEnPreparation()){
+                    cocktail = new Cocktail(Cocktail.TypeCocktail.MARGARITA);
+                    cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.CITRON));
+                    Main.p.setEnPreparation(true);
+                    Main.p.getCommandeEnCours().getCommande().add(cocktail);
+                }
+                else{
+                    cocktail = Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO);
+                    if (cocktail !=null){
+                        if (cocktail.verifOrdreIngredient(new Ingredient(Ingredient.TypeIngredient.CITRON))){
+                            break;
+                        }
+                    }
+                }
+
                // .addIngredient(new Ingredient(Ingredient.TypeIngredient.CITRON))
+                break;
+            case "menthe":
 
+                if (!Main.p.isEnPreparation()){
+                    cocktail = new Cocktail(Cocktail.TypeCocktail.MOJITO);
+                    cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.MENTHE));
+                    Main.p.setEnPreparation(true);
+                    Main.p.getCommandeEnCours().getCommande().add(cocktail);
+                }
+
+                break;
+            case "glace" :
+                if (Main.p.isEnPreparation()){
+                    cocktail = Main.p.getCommandeEnCours().searchCocktail();
+                    if(cocktail.verifOrdreIngredient(new Ingredient(Ingredient.TypeIngredient.GLACE))){
+                        break;
+                    }
+
+                }
+                break;
+            case "rhum" :
+                if (Main.p.isEnPreparation()){
+                    cocktail = Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO);
+                    if(cocktail.verifOrdreIngredient(new Ingredient(Ingredient.TypeIngredient.RHUM))){
+                        break;
+                    }
+                }
+                break;
+            case "tequila" :
+                if (Main.p.isEnPreparation()){
+                    cocktail = Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA);
+                    if(cocktail.verifOrdreIngredient(new Ingredient(Ingredient.TypeIngredient.TEQUILA))){
+                        break;
+                    }
+                }
+                break;
+            case "shaker" :
+                if (Main.p.isEnPreparation()){
+                    cocktail = Main.p.getCommandeEnCours().searchCocktail();
+                }
         }
-
+        setListIngredients();
     }
 
 

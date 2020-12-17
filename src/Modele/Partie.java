@@ -18,6 +18,8 @@ public class Partie {
 
     private int meilleurScore;
 
+    private boolean enPreparation = false;
+
     private Commande commande;
 
     private Commande commandeEnCours = new Commande();
@@ -30,6 +32,13 @@ public class Partie {
             commande = (new Commande().genererCommande());
     }
 
+    public boolean isEnPreparation() {
+        return enPreparation;
+    }
+
+    public void setEnPreparation(boolean enPreparation) {
+        this.enPreparation = enPreparation;
+    }
 
     public Commande getCommande() {
         return commande;

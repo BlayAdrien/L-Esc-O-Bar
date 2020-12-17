@@ -34,7 +34,7 @@ public class Commande{
 
         int nbBoissons = (int) (Math.random()*(nbBoissonMax)) + 1;
         for (int i = -5; i < nbBoissons; i++) {
-            int boisson = (int) (Math.random()*(4)) + 1;
+            int boisson = (int) (Math.random()*(5)) + 1;
             switch (boisson) {
                 case 1:
                     this.addBoisson(new Biere(Biere.choixBiere.BLONDE));
@@ -46,7 +46,10 @@ public class Commande{
                     this.addBoisson(new Soda());
                     break;
                 case 4:
-                    this.addBoisson(new Cocktail());
+                    this.addBoisson(new Cocktail(Cocktail.TypeCocktail.MOJITO));
+                    break;
+                case 5:
+                    this.addBoisson(new Cocktail(Cocktail.TypeCocktail.MARGARITA));
                     break;
             }
         }
@@ -77,6 +80,26 @@ public class Commande{
 
     public void setNbBoissonMax(int nbBoissonMax) {
         this.nbBoissonMax = nbBoissonMax;
+    }
+
+    public Cocktail searchCocktail(){
+        for (Boisson b: commande
+             ) {
+            if ( b instanceof Cocktail){
+                return (Cocktail)b;
+            }
+        }
+        return null;
+    }
+
+    public Cocktail searchCocktail(Cocktail.TypeCocktail typeCocktail){
+        for (Boisson b: commande
+        ) {
+            if ( b.equals(new Cocktail(typeCocktail))){
+                return (Cocktail)b;
+            }
+        }
+        return null;
     }
 
     @Override

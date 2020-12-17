@@ -4,14 +4,13 @@ import java.util.Objects;
 
 public class Soda extends Boisson {
 
-    private String name = "Soda";
-
     private static final int valeur = 10;
 
     private static final String img = "img/soda.jpg";
 
 
     public Soda() {
+        super("Soda");
     }
 
     @Override
@@ -22,7 +21,7 @@ public class Soda extends Boisson {
     @Override
     public String toString() {
         return "Soda{" +
-                "nom='" + name + '\'' +
+                "nom='" + super.getName() + '\'' +
                 '}';
     }
 
@@ -31,17 +30,13 @@ public class Soda extends Boisson {
         return valeur;
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Soda soda = (Soda) o;
-        return Objects.equals(name, soda.name);
+        return Objects.equals(super.getName(), soda.getName());
     }
 
 

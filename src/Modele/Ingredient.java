@@ -12,6 +12,10 @@ public class Ingredient {
         this.type = type;
     }
 
+    public TypeIngredient getType() {
+        return type;
+    }
+
     @Override
     public String toString() {
         return "Ingredient{" +
