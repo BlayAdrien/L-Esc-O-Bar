@@ -33,7 +33,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="150.0" prefWidth="590.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
-            <ImageView fx:id="biereBlonde" fitHeight="130.0" fitWidth="150.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="biereBrune" fitHeight="130.0" fitWidth="150.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Controller/img/tireuse_marron.png" />
                </image>
@@ -41,7 +41,7 @@
                   <Insets />
                </HBox.margin>
             </ImageView>
-            <ImageView fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="biereBlonde" onMouseClicked="#setOnCliked" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Controller/img/tireuse_blonde.png" />
                </image>
@@ -51,7 +51,7 @@
             </ImageView>
             <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="499.0">
                <children>
-                  <ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="shaker" onMouseClicked="#clicIngredient" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Controller/img/shaker.png" />
                      </image>
@@ -59,7 +59,7 @@
                         <Insets />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="rhum" onMouseClicked="#clicIngredient" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Controller/img/rhum.png" />
                      </image>
@@ -67,7 +67,7 @@
                         <Insets left="60.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="tequila" onMouseClicked="#clicIngredient" fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Controller/img/tequila.png" />
                      </image>
