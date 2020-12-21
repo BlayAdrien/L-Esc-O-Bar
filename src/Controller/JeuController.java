@@ -1,6 +1,7 @@
 package Controller;
 
 import Modele.*;
+import Vue.Toast;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
@@ -16,12 +17,15 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import sample.Main;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static java.lang.Thread.sleep;
 
 public class JeuController implements Initializable {
 
@@ -157,75 +161,142 @@ public class JeuController implements Initializable {
             case "verreBiere" :
                 Main.p.getCommandeEnCours().addBoisson(new Biere(new Verre(Verre.typeVerre.CYLINDRE)));
                 break;
-            case "verreCocktail" :
-                servir(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO));
+            case "verreMojito" :
+                if (Main.p.getCommandeEnCours().searchCocktail().verifOrdreIngredient()){
+                    servir(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO));
+                    Main.p.getCommandeEnCours().getCommande().remove(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO));
+                    Main.p.setEnPreparation(false);
+                    setListIngredients();
+                }
+                else{
+                    System.out.println("pas bon");
+                    Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
+                    Toast.makeText(stage,"Rappel Ordre Mojito : Menthe - Citron - Glace - Rhum - Shaker",5000,500,500);
+                    Main.p.setScore(Main.p.getScore() - 20);
+                }
+                break;
+            case "verreMargarita" :
+                if (Main.p.getCommandeEnCours().searchCocktail().verifOrdreIngredient()){
+                    servir(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA));
+                    Main.p.getCommandeEnCours().getCommande().remove(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA));
+                    Main.p.setEnPreparation(false);
+                    setListIngredients();
+                }
+                else{
+                    Main.p.setScore(Main.p.getScore() - 20);
+                    System.out.println("pas bon");
+                    Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
+                    Toast.makeText(stage,"Rappel Ordre Margarita : Citron - Glace - Tequila - Shaker",5000,500,500);
+                }
                 break;
         }
     }
 
 
 
-    public void clicIngredient(MouseEvent event){
+    public void clicIngredient(MouseEvent event) throws InterruptedException {
         ImageView selectIngredient = (ImageView)event.getSource();
         Cocktail cocktail;
         switch (selectIngredient.getId()){
             case "citron":
                 if (!Main.p.isEnPreparation()){
-                    cocktail = new Cocktail(Cocktail.TypeCocktail.MARGARITA);
+                    cocktail = new Cocktail();
                     cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.CITRON));
                     Main.p.setEnPreparation(true);
                     Main.p.getCommandeEnCours().getCommande().add(cocktail);
                 }
                 else{
-                    cocktail = Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO);
+                    cocktail = Main.p.getCommandeEnCours().searchCocktail();
                     if (cocktail !=null){
-                        if (cocktail.verifOrdreIngredient(new Ingredient(Ingredient.TypeIngredient.CITRON))){
-                            break;
-                        }
+                       cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.CITRON));
+                    }
+                    else{
+                        System.out.println("Pas de cocktail");
                     }
                 }
-
-               // .addIngredient(new Ingredient(Ingredient.TypeIngredient.CITRON))
                 break;
             case "menthe":
 
                 if (!Main.p.isEnPreparation()){
-                    cocktail = new Cocktail(Cocktail.TypeCocktail.MOJITO);
+                    cocktail = new Cocktail();
                     cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.MENTHE));
                     Main.p.setEnPreparation(true);
                     Main.p.getCommandeEnCours().getCommande().add(cocktail);
+                }
+                else{
+                    cocktail = Main.p.getCommandeEnCours().searchCocktail();
+                    if (cocktail !=null){
+                        cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.MENTHE));
+                    }
+                    else{
+                        System.out.println("Pas de cocktail");
+                    }
                 }
 
                 break;
             case "glace" :
                 if (Main.p.isEnPreparation()){
                     cocktail = Main.p.getCommandeEnCours().searchCocktail();
-                    if(cocktail.verifOrdreIngredient(new Ingredient(Ingredient.TypeIngredient.GLACE))){
-                        break;
+                    if (cocktail != null ){
+                        cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.GLACE));
+                    }
+                    else{
+                        System.out.println("Pas de cocktail");
                     }
 
+                }
+                else{
+                    cocktail = new Cocktail();
+                    cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.GLACE));
+                    Main.p.setEnPreparation(true);
+                    Main.p.getCommandeEnCours().getCommande().add(cocktail);
                 }
                 break;
             case "rhum" :
                 if (Main.p.isEnPreparation()){
-                    cocktail = Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO);
-                    if(cocktail.verifOrdreIngredient(new Ingredient(Ingredient.TypeIngredient.RHUM))){
-                        break;
+                    cocktail = Main.p.getCommandeEnCours().searchCocktail();
+                    if (cocktail != null ){
+                        cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.RHUM));
                     }
+                    else{
+                        System.out.println("Pas de cocktail");
+                    }
+                }
+                else{
+                    cocktail = new Cocktail();
+                    cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.RHUM));
+                    Main.p.setEnPreparation(true);
+                    Main.p.getCommandeEnCours().getCommande().add(cocktail);
                 }
                 break;
             case "tequila" :
                 if (Main.p.isEnPreparation()){
-                    cocktail = Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA);
-                    if(cocktail.verifOrdreIngredient(new Ingredient(Ingredient.TypeIngredient.TEQUILA))){
-                        break;
+                    cocktail = Main.p.getCommandeEnCours().searchCocktail();
+                    if (cocktail != null ){
+                        cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.TEQUILA));
                     }
+                    else{
+                        System.out.println("Pas de cocktail");
+                    }
+
+                }
+                else{
+                    cocktail = new Cocktail();
+                    cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.TEQUILA));
+                    Main.p.setEnPreparation(true);
+                    Main.p.getCommandeEnCours().getCommande().add(cocktail);
                 }
                 break;
             case "shaker" :
                 if (Main.p.isEnPreparation()){
                     cocktail = Main.p.getCommandeEnCours().searchCocktail();
+                    sleep(5000);
+                    cocktail.setShake(true);
                 }
+                break;
+            case "poubelle":
+                Main.p.getCommandeEnCours().getCommande().remove(Main.p.getCommandeEnCours().searchCocktail());
+                Main.p.setEnPreparation(false);
         }
         setListIngredients();
     }
@@ -267,6 +338,7 @@ public class JeuController implements Initializable {
                 break;
         }
     }
+
 
 
     public void chrono() throws IOException {

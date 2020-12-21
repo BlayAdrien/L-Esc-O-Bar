@@ -1,5 +1,7 @@
 package Modele;
 
+import java.util.Objects;
+
 public class Ingredient {
 
     public enum TypeIngredient{
@@ -22,4 +24,15 @@ public class Ingredient {
                 "nom='" + type + '\'' +
                 '}';
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ingredient that = (Ingredient) o;
+        return type == that.type;
+    }
+
+
 }

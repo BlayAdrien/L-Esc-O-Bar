@@ -1,9 +1,9 @@
 package Modele;
 
-        import java.sql.SQLOutput;
-        import java.util.ArrayList;
-        import java.util.LinkedList;
-        import java.util.Objects;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Cocktail extends Boisson implements VerreInterface{
 
@@ -11,6 +11,9 @@ public class Cocktail extends Boisson implements VerreInterface{
         MARGARITA, MOJITO
     }
 
+    private final  LinkedList<Ingredient> listMojito = new LinkedList<>(List.of(new Ingredient(Ingredient.TypeIngredient.MENTHE), new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.RHUM)));
+
+    private final  LinkedList<Ingredient> listMargarita = new LinkedList<>(List.of( new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.TEQUILA)));
 
 
     private TypeCocktail typeCocktail;
@@ -18,6 +21,8 @@ public class Cocktail extends Boisson implements VerreInterface{
     private LinkedList<Ingredient> ingredients = new LinkedList<>();
 
     private static final int valeur = 30;
+
+    private boolean shake=false;
 
     private Verre verre;
 
@@ -38,66 +43,22 @@ public class Cocktail extends Boisson implements VerreInterface{
     }
 
     public void addIngredient(Ingredient ingredient){
-        ingredients.add(ingredient);
+        ingredients.addLast(ingredient);
     }
 
-    public boolean verifOrdreIngredient(Ingredient ingredient){
+    public boolean verifOrdreIngredient(){
 
-        if (this.getTypeCocktail() == TypeCocktail.MOJITO){
-            switch (ingredient.getType()){
-                case GLACE:
-                    if(this.ingredients.getLast().getType() == Ingredient.TypeIngredient.CITRON){
-                        this.addIngredient(ingredient);
-                        return true;
-                    }
-                    else{
-                        System.out.println("Pas le bon ingredient");
-                        return false;
-                    }
-
-                case CITRON:
-                    if(this.ingredients.getLast().getType() == Ingredient.TypeIngredient.MENTHE){
-                        this.addIngredient(ingredient);
-                        return true;
-                    }
-                    else{
-                        System.out.println("Pas le bon ingredient");
-                        return false;
-                    }
-                case RHUM:
-                    if(this.ingredients.getLast().getType() == Ingredient.TypeIngredient.GLACE){
-                        this.addIngredient(ingredient);
-                        return true;
-                    }
-                    else{
-                        System.out.println("Pas le bon ingredient");
-                        return false;
-                    }
+            if(ingredients.equals(listMojito) && isShake()){
+                this.setTypeCocktail(TypeCocktail.MOJITO);
+                System.out.println("bon");
+                return true;
             }
-        }
-        if (this.getTypeCocktail() == TypeCocktail.MARGARITA){
-            switch (ingredient.getType()){
-                case GLACE:
-                    if(this.ingredients.getLast().getType() == Ingredient.TypeIngredient.CITRON){
-                        this.addIngredient(ingredient);
-                        return true;
-                    }
-                    else{
-                        System.out.println("Pas le bon ingredient");
-                        return false;
-                    }
 
-                case TEQUILA:
-                    if(this.ingredients.getLast().getType() == Ingredient.TypeIngredient.GLACE){
-                        this.addIngredient(ingredient);
-                        return true;
-                    }
-                    else{
-                        System.out.println("Pas le bon ingredient");
-                        return false;
-                    }
+            if(ingredients.equals(listMargarita) && isShake()){
+                this.setTypeCocktail(TypeCocktail.MARGARITA);
+                System.out.println("bon");
+                return true;
             }
-        }
         return false;
     }
 
@@ -127,6 +88,10 @@ public class Cocktail extends Boisson implements VerreInterface{
         return typeCocktail;
     }
 
+    public void setTypeCocktail(TypeCocktail typeCocktail) {
+        this.typeCocktail = typeCocktail;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -135,7 +100,13 @@ public class Cocktail extends Boisson implements VerreInterface{
         return typeCocktail == cocktail.typeCocktail;
     }
 
+    public boolean isShake() {
+        return shake;
+    }
 
+    public void setShake(boolean shake) {
+        this.shake = shake;
+    }
 
     @Override
     public boolean verifVerre() {

@@ -114,7 +114,7 @@
                         <Insets top="30.0" />
                      </GridPane.margin>
                   </ImageView>
-                  <ImageView fx:id="verreCocktail" fitHeight="150.0" fitWidth="75.0" onMouseClicked="#clicVerre" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                  <ImageView fx:id="verreMargarita" fitHeight="150.0" fitWidth="75.0" onMouseClicked="#clicVerre" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                      <image>
                         <Image url="@../Controller/img/cocktail.png" />
                      </image>
@@ -132,7 +132,7 @@
                         <Image url="@../Controller/img/ice.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                  <ImageView fx:id="verreMojito" onMouseClicked="#clicVerre" fitHeight="150.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                      <image>
                         <Image url="@../Controller/img/glassMargarita.png" />
                      </image>
@@ -145,7 +145,7 @@
                   <Insets />
                </HBox.margin>
             </GridPane>
-            <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="poubelle" onMouseClicked="#clicIngredient" fitHeight="200.0" fitWidth="400.0"  pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Controller/img/trash.png" />
                </image>
