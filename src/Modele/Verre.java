@@ -3,11 +3,10 @@ package Modele;
 public class Verre {
 
     public enum  typeVerre{
-        CYLINDRE, ENV
+        CYLINDRE, ENV, ENU
     }
 
     private typeVerre type;
-
 
     public Verre(typeVerre type) {
         this.type = type;

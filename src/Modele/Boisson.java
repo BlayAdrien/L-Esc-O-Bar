@@ -32,6 +32,4 @@ public abstract class Boisson {
     }
 
     public abstract boolean equals(Object o);
-
-    public abstract String imgPath();
 }

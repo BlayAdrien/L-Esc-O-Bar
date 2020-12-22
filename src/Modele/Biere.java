@@ -13,10 +13,7 @@ public class Biere extends Boisson implements VerreInterface{
 
     private Verre verre;
 
-
     private static final int valeur = 10;
-
-    private static final String img = "../img/biere_blonde.jpg";
 
     public Biere(choixBiere typeBiere) {
         super(typeBiere.toString());
@@ -30,11 +27,6 @@ public class Biere extends Boisson implements VerreInterface{
     public void setTypeBiere(choixBiere typeBiere) {
         this.typeBiere = typeBiere;
         super.setName(typeBiere.toString());
-    }
-
-    @Override
-    public String imgPath() {
-        return img;
     }
 
     @Override
@@ -53,7 +45,6 @@ public class Biere extends Boisson implements VerreInterface{
     public int getScore(){
         return valeur;
     }
-
 
     @Override
     public boolean equals(Object o) {

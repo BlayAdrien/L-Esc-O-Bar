@@ -184,7 +184,6 @@ public class JeuController implements Initializable {
                 }
                 else{
                     Main.p.setScore(Main.p.getScore() - 20);
-                    System.out.println("pas bon");
                     Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
                     Toast.makeText(stage,"Rappel Ordre Margarita : Citron - Glace - Tequila - Shaker",5000,500,500);
                 }
@@ -339,8 +338,6 @@ public class JeuController implements Initializable {
         }
     }
 
-
-
     public void chrono() throws IOException {
         Timeline temps = new Timeline();
         Main.p.setTpsPartie(60);
@@ -362,7 +359,6 @@ public class JeuController implements Initializable {
         });
         temps.getKeyFrames().add(frame);
         temps.playFromStart();
-
     }
 
 

@@ -1,20 +1,13 @@
 package Modele;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.util.Duration;
-
-import java.util.ArrayList;
 
 public class Partie {
 
     private final IntegerProperty score = new SimpleIntegerProperty();
 
-    private IntegerProperty tpsPartie = new SimpleIntegerProperty(60);
+    private IntegerProperty tpsPartie = new SimpleIntegerProperty();
 
     private int meilleurScore;
 

@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba1ca0c4-a1dd-400f-b90e-3b9773516097" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Vue/Toast.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/JeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JeuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Biere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Boisson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Boisson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Soda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Soda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Verre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Verre.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608240602493</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cocktails fini avec gestion de fonction jeter + ajout de toast quand mauvais cocktails">
+      <created>1608556376066</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608556376066</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,30 +164,26 @@
     <MESSAGE value="Possibilite de servir la commande en cours + incrementation du score" />
     <MESSAGE value="Modif methode pour servir + debut cocktail" />
     <MESSAGE value="Cocktails" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cocktails" />
+    <MESSAGE value="Cocktails fini avec gestion de fonction jeter + ajout de toast quand mauvais cocktails" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cocktails fini avec gestion de fonction jeter + ajout de toast quand mauvais cocktails" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Modele/Cocktail.java</url>
-          <line>48</line>
+          <line>45</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Modele/Cocktail.java</url>
-          <line>50</line>
+          <line>47</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Modele/Cocktail.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Modele/Cocktail.java</url>
           <line>52</line>
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jrt://C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2019.2.4/jbr!/java.base/java/util/AbstractList.class</url>

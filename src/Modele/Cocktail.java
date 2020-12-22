@@ -15,7 +15,6 @@ public class Cocktail extends Boisson implements VerreInterface{
 
     private final  LinkedList<Ingredient> listMargarita = new LinkedList<>(List.of( new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.TEQUILA)));
 
-
     private TypeCocktail typeCocktail;
 
     private LinkedList<Ingredient> ingredients = new LinkedList<>();
@@ -25,8 +24,6 @@ public class Cocktail extends Boisson implements VerreInterface{
     private boolean shake=false;
 
     private Verre verre;
-
-    private static final String img = "img/mojito.jpg";
 
     public Cocktail() {
         super();
@@ -50,13 +47,11 @@ public class Cocktail extends Boisson implements VerreInterface{
 
             if(ingredients.equals(listMojito) && isShake()){
                 this.setTypeCocktail(TypeCocktail.MOJITO);
-                System.out.println("bon");
                 return true;
             }
 
             if(ingredients.equals(listMargarita) && isShake()){
                 this.setTypeCocktail(TypeCocktail.MARGARITA);
-                System.out.println("bon");
                 return true;
             }
         return false;
@@ -64,11 +59,6 @@ public class Cocktail extends Boisson implements VerreInterface{
 
     public LinkedList<Ingredient> getIngredients() {
         return ingredients;
-    }
-
-    @Override
-    public String imgPath() {
-        return img;
     }
 
     @Override
