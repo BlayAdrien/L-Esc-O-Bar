@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Cocktail extends Boisson implements VerreInterface{
+public class Cocktail extends Boisson{
 
     public enum TypeCocktail{
         MARGARITA, MOJITO
@@ -98,8 +98,4 @@ public class Cocktail extends Boisson implements VerreInterface{
         this.shake = shake;
     }
 
-    @Override
-    public boolean verifVerre() {
-        return ( verre.getType() == Verre.typeVerre.ENV);
-    }
 }

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba1ca0c4-a1dd-400f-b90e-3b9773516097" name="Default Changelist" comment="" />
+    <list default="true" id="ba1ca0c4-a1dd-400f-b90e-3b9773516097" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Modele/Biere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608670887256</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Niveaux(Parametre pour chaque niveau) + Serialisation (Meilleur Score par niveau)">
+      <created>1608670995675</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608670995675</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

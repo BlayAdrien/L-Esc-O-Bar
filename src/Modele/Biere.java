@@ -2,7 +2,7 @@ package Modele;
 
 import java.util.Objects;
 
-public class Biere extends Boisson implements VerreInterface{
+public class Biere extends Boisson {
 
 
     public enum  choixBiere{
@@ -29,10 +29,6 @@ public class Biere extends Boisson implements VerreInterface{
         super.setName(typeBiere.toString());
     }
 
-    @Override
-    public boolean verifVerre() {
-        return (verre.getType() == Verre.typeVerre.CYLINDRE);
-    }
 
     @Override
     public String toString() {
