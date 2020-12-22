@@ -41,7 +41,7 @@
                   <Insets />
                </HBox.margin>
             </ImageView>
-            <ImageView fx:id="biereBlonde" onMouseClicked="#setOnCliked" fitHeight="130.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="biereBlonde" fitHeight="130.0" fitWidth="200.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Controller/img/tireuse_blonde.png" />
                </image>
@@ -51,7 +51,7 @@
             </ImageView>
             <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="499.0">
                <children>
-                  <ImageView fx:id="shaker" onMouseClicked="#clicIngredient" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="shaker" fitHeight="120.0" fitWidth="150.0" onMouseClicked="#clicIngredient" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Controller/img/shaker.png" />
                      </image>
@@ -59,7 +59,7 @@
                         <Insets />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fx:id="rhum" onMouseClicked="#clicIngredient" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="rhum" fitHeight="120.0" fitWidth="150.0" onMouseClicked="#clicIngredient" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Controller/img/rhum.png" />
                      </image>
@@ -67,7 +67,7 @@
                         <Insets left="60.0" />
                      </HBox.margin>
                   </ImageView>
-                  <ImageView fx:id="tequila" onMouseClicked="#clicIngredient" fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="tequila" fitHeight="120.0" fitWidth="200.0" onMouseClicked="#clicIngredient" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Controller/img/tequila.png" />
                      </image>
@@ -132,7 +132,7 @@
                         <Image url="@../Controller/img/ice.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="verreMojito" onMouseClicked="#clicVerre" fitHeight="150.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                  <ImageView fx:id="verreMojito" fitHeight="150.0" fitWidth="65.0" onMouseClicked="#clicVerre" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                      <image>
                         <Image url="@../Controller/img/glassMargarita.png" />
                      </image>
@@ -145,7 +145,7 @@
                   <Insets />
                </HBox.margin>
             </GridPane>
-            <ImageView fx:id="poubelle" onMouseClicked="#clicIngredient" fitHeight="200.0" fitWidth="400.0"  pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="poubelle" fitHeight="200.0" fitWidth="400.0" onMouseClicked="#clicIngredient" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Controller/img/trash.png" />
                </image>
@@ -173,7 +173,7 @@
       <ListView fx:id="listIngredients" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
       <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
          <children>
-            <Label textFill="WHITE">
+            <Label fx:id="tpsPartie" prefHeight="45.0" prefWidth="86.0" textFill="WHITE">
                <font>
                   <Font size="30.0" />
                </font>
@@ -191,5 +191,10 @@
             </Label>
          </children>
       </HBox>
+      <Label fx:id="meilleurScore" prefHeight="17.0" prefWidth="167.0" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
 </GridPane>

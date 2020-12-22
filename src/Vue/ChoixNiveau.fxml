@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.choixNiveauxController">
+   <children>
+      <Button fx:id="niveau1" layoutX="266.0" layoutY="155.0" mnemonicParsing="false" onAction="#clicNiveau" text="Niveau 1" />
+      <Button fx:id="niveau2" layoutX="266.0" layoutY="211.0" mnemonicParsing="false" onAction="#clicNiveau" text="Niveau 2" />
+      <Button fx:id="niveau3" layoutX="266.0" layoutY="269.0" mnemonicParsing="false" onAction="#clicNiveau" text="Niveau 3" />
+   </children>
+</AnchorPane>

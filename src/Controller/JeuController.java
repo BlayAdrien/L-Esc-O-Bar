@@ -4,6 +4,7 @@ import Modele.*;
 import Vue.Toast;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -46,6 +47,9 @@ public class JeuController implements Initializable {
     Label tpsPartie;
 
     @FXML
+    Label meilleurScore;
+
+    @FXML
     ListView<String> listCommande;
 
     @FXML
@@ -58,13 +62,16 @@ public class JeuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //score.textProperty().bind(Bindings.convert(Main.p.scoreProperty()));
-       // tpsPartie.textProperty().bind(Bindings.convert(Main.p.tpsPartieProperty()));
+        score.textProperty().bind(Bindings.convert(Main.p.scoreProperty()));
+        tpsPartie.textProperty().bind(Bindings.convert(Main.p.tpsPartieProperty()));
+        meilleurScore.textProperty().bind(Bindings.convert(Main.p.meilleurScoreProperty()));
+
         try {
             chrono();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        Main.p.genererCommandes();
         setListCommande();
     }
 
@@ -340,7 +347,7 @@ public class JeuController implements Initializable {
 
     public void chrono() throws IOException {
         Timeline temps = new Timeline();
-        Main.p.setTpsPartie(60);
+        Main.p.setTpsPartie(Main.p.getTpsPartie());
         temps.setCycleCount(Timeline.INDEFINITE);
         if (temps!=null){
             temps.stop();

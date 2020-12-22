@@ -57,6 +57,7 @@ public class Accueil {
 	@FXML
 	private void jouer(ActionEvent event) throws IOException {
 		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+		Main.p = Main.save.charger(1);
         Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
        	stage.setScene(Scene);
         stage.show();
@@ -72,4 +73,14 @@ public class Accueil {
         newFenetre.setResizable(false);
         newFenetre.show();
     }
+
+	@FXML
+	private void choixNiveau(ActionEvent event) throws IOException {
+		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+
+		Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/ChoixNiveau.fxml")));
+		stage.setScene(Scene);
+		stage.show();
+	}
+
 }

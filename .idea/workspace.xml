@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba1ca0c4-a1dd-400f-b90e-3b9773516097" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/choixNiveauxController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Vue/ChoixNiveau.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Accueil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/InterfaceJeu.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/JeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JeuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Biere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Boisson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Boisson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Commande.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modele/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Soda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Soda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Verre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Verre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/Accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/Accueil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -40,14 +44,16 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\ressources" />
+      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Modele" />
       <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Controller\img" />
       <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Controller" />
       <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Vue" />
-      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\sample" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -189,6 +195,16 @@
           <url>jrt://C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2019.2.4/jbr!/java.base/java/util/AbstractList.class</url>
           <line>137</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Modele/SauvegardeGestion.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Modele/SauvegardeGestion.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

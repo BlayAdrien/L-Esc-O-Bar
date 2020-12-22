@@ -30,11 +30,14 @@ public class Commande{
         return commande;
     }
 
-    public Commande genererCommande() {
-
+    public Commande genererCommande(boolean avecCocktail) {
+        int choixBoisson = 3;
+        if (avecCocktail){
+             choixBoisson = 5;
+         }
         int nbBoissons = (int) (Math.random()*(nbBoissonMax)) + 1;
         for (int i = -5; i < nbBoissons; i++) {
-            int boisson = (int) (Math.random()*(5)) + 1;
+            int boisson = (int) (Math.random()*(choixBoisson)) + 1;
             switch (boisson) {
                 case 1:
                     this.addBoisson(new Biere(Biere.choixBiere.BLONDE));

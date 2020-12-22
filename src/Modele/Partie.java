@@ -3,13 +3,20 @@ package Modele;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 
-public class Partie {
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
+public class Partie implements Externalizable {
 
     private final IntegerProperty score = new SimpleIntegerProperty();
 
+    private final IntegerProperty meilleurScore = new SimpleIntegerProperty();
+
     private IntegerProperty tpsPartie = new SimpleIntegerProperty();
 
-    private int meilleurScore;
+    private int niveau;
 
     private boolean enPreparation = false;
 
@@ -17,12 +24,22 @@ public class Partie {
 
     private Commande commandeEnCours = new Commande();
 
-    public Partie(int meilleurScore) {
-        this.meilleurScore = meilleurScore;
+    public Partie() {
+    }
+
+    public Partie(int tpsPartie, int niveau) {
+        this.setTpsPartie(tpsPartie);
+        this.niveau = niveau;
     }
 
     public void genererCommandes(){
-            commande = (new Commande().genererCommande());
+        if (niveau > 2){
+            commande = (new Commande().genererCommande(true));
+        }
+        else{
+            commande = (new Commande().genererCommande(false));
+
+        }
     }
 
     public boolean isEnPreparation() {
@@ -47,15 +64,16 @@ public class Partie {
 
     public Integer getScore() {return score.get();}
     public IntegerProperty scoreProperty() {return score;}
-    public void setScore(Integer score) {this.score.set(score);}
-
-    public int getMeilleurScore() {
-        return meilleurScore;
+    public void setScore(Integer score) {
+        this.score.set(score);
+        if (getScore()>getMeilleurScore()){
+            setMeilleurScore(getScore());
+        }
     }
 
-    public void setMeilleurScore(int meilleurScore) {
-        this.meilleurScore = meilleurScore;
-    }
+    public Integer getMeilleurScore() {return meilleurScore.get();}
+    public IntegerProperty meilleurScoreProperty() {return meilleurScore;}
+    public void setMeilleurScore(Integer score) {this.meilleurScore.set(score);}
 
     public int getTpsPartie() {
         return tpsPartie.get();
@@ -69,6 +87,14 @@ public class Partie {
         this.tpsPartie.set(tpsPartie);
     }
 
+    public int getNiveau() {
+        return niveau;
+    }
+
+    public void setNiveau(int niveau) {
+        this.niveau = niveau;
+    }
+
     @Override
     public String toString() {
         return "Partie{" +
@@ -76,5 +102,17 @@ public class Partie {
                 ", meilleurScore=" + meilleurScore +
                 ", commandes=" + commande +
                 '}';
+    }
+
+    @Override
+    public void writeExternal(ObjectOutput objectOutput) throws IOException {
+        objectOutput.writeInt(meilleurScore.get());
+        objectOutput.writeInt(niveau);
+    }
+
+    @Override
+    public void readExternal(ObjectInput objectInput) throws IOException, ClassNotFoundException {
+        meilleurScore.set(objectInput.readInt());
+        setNiveau(objectInput.readInt());
     }
 }
