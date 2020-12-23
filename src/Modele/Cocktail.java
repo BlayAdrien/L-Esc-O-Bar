@@ -1,5 +1,6 @@
 package Modele;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -9,9 +10,9 @@ public class Cocktail extends Boisson{
         MARGARITA, MOJITO
     }
 
-    private final  LinkedList<Ingredient> listMojito = new LinkedList<>(List.of(new Ingredient(Ingredient.TypeIngredient.MENTHE), new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.RHUM)));
+    private final  LinkedList<Ingredient> listMojito = new LinkedList<>(Arrays.asList(new Ingredient(Ingredient.TypeIngredient.MENTHE), new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.RHUM)));
 
-    private final  LinkedList<Ingredient> listMargarita = new LinkedList<>(List.of( new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.TEQUILA)));
+    private final  LinkedList<Ingredient> listMargarita = new LinkedList<>(Arrays.asList( new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.TEQUILA)));
 
     private TypeCocktail typeCocktail;
 
