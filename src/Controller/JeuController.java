@@ -3,6 +3,7 @@ package Controller;
 import Modele.*;
 import Vue.Toast;
 import javafx.animation.KeyFrame;
+import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
@@ -10,8 +11,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Orientation;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -19,6 +22,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import javafx.util.Duration;
 import sample.Main;
 
@@ -200,7 +204,7 @@ public class JeuController implements Initializable {
 
 
 
-    public void clicIngredient(MouseEvent event) throws InterruptedException {
+    public void clicIngredient(MouseEvent event) throws InterruptedException, IOException {
         ImageView selectIngredient = (ImageView)event.getSource();
         Cocktail cocktail;
         switch (selectIngredient.getId()){
@@ -296,8 +300,17 @@ public class JeuController implements Initializable {
             case "shaker" :
                 if (Main.p.isEnPreparation()){
                     cocktail = Main.p.getCommandeEnCours().searchCocktail();
-                    sleep(5000);
+                    Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/Shaker.fxml")));
+                    Stage newFenetre = new Stage();
+                    newFenetre.setScene(Scene);
+                    newFenetre.initOwner(Main.getPrimaryStage());
+                    newFenetre.setResizable(false);
+                    newFenetre.show();
+                    PauseTransition pause = new PauseTransition(Duration.seconds(5));
+                    pause.setOnFinished(e -> ((Stage)(newFenetre.getScene().getWindow())).close());
+                    pause.play();
                     cocktail.setShake(true);
+
                 }
                 break;
             case "poubelle":
@@ -357,10 +370,19 @@ public class JeuController implements Initializable {
             public void handle(ActionEvent actionEvent) {
                 Main.p.setTpsPartie(Main.p.getTpsPartie() - 1 );
                     if (Main.p.getTpsPartie() == 0){
-
                             temps.stop();
-
-
+                            Scene Scene;
+							try {
+								Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/Fin.fxml")));
+								Stage newFenetre = new Stage();
+	                            newFenetre.setScene(Scene);
+	                            newFenetre.initOwner(Main.getPrimaryStage());
+	                            newFenetre.setResizable(false);
+	                            newFenetre.show();
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
                 }
             }
         });
