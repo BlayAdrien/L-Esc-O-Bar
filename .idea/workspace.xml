@@ -1,227 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba1ca0c4-a1dd-400f-b90e-3b9773516097" name="Default Changelist" comment="">
+    <list default="true" id="3ac70177-d64f-479a-888b-f34df3298232" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_swt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L-Esc-O-Bar.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Vue/FinDefaite.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Vue/FinVictoire.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/L-Esc-O-Bar.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/JeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JeuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/choixNiveauxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/choixNiveauxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/shaker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Biere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Soda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Soda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/Fin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="Nicolas" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1kjXg99xu6fI7nMN7p6M1KGkOjJ" />
+  <component name="ProjectId" id="1mKp3K4RvByeA9Q83uM7Eq86RxY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Morpion" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Vue" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\ressources" />
-      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Modele" />
-      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Controller\img" />
-      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Controller" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Vue" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
       <module name="L-Esc-O-Bar" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <module name="L-Esc-O-Bar" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Program&quot; &quot;Files\JetBrains\IntelliJ&quot; &quot;IDEA&quot; &quot;Community&quot; &quot;Edition&quot; &quot;2019.2.4\lib\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ba1ca0c4-a1dd-400f-b90e-3b9773516097" name="Default Changelist" comment="Possibilite de servir la commande en cours + incrementation du score" />
-      <created>1606215082465</created>
+      <changelist id="3ac70177-d64f-479a-888b-f34df3298232" name="Default Changelist" comment="" />
+      <created>1609251939272</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1606215082465</updated>
+      <updated>1609251939272</updated>
     </task>
-    <task id="LOCAL-00001" summary="Config">
-      <created>1606216060606</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1606216060607</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Generateur de commande aleatoires">
-      <created>1606994838302</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1606994838303</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Generateur de commande aleatoires + debut interface de jeu">
-      <created>1607012991644</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1607012991644</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Possibilite de servir la commande en cours + incrementation du score">
-      <created>1607539946762</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1607539946763</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Modif methode pour servir + debut cocktail">
-      <created>1608049001410</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1608049001411</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Cocktails">
-      <created>1608240602493</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1608240602493</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Cocktails fini avec gestion de fonction jeter + ajout de toast quand mauvais cocktails">
-      <created>1608556376066</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1608556376066</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Niveaux(Parametre pour chaque niveau) + Serialisation (Meilleur Score par niveau)">
-      <created>1608670887256</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1608670887256</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Niveaux(Parametre pour chaque niveau) + Serialisation (Meilleur Score par niveau)">
-      <created>1608670995675</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1608670995675</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Niveaux(Parametre pour chaque niveau) + Serialisation (Meilleur Score par niveau)">
-      <created>1608671257401</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1608671257401</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Config" />
-    <MESSAGE value="Ajout classes du modèle" />
-    <MESSAGE value="Generateur de commande aleatoires" />
-    <MESSAGE value="Generateur de commande aleatoires + debut interface de jeu" />
-    <MESSAGE value="Possibilite de servir la commande en cours + incrementation du score" />
-    <MESSAGE value="Modif methode pour servir + debut cocktail" />
-    <MESSAGE value="Cocktails" />
-    <MESSAGE value="Cocktails fini avec gestion de fonction jeter + ajout de toast quand mauvais cocktails" />
-    <MESSAGE value="Niveaux(Parametre pour chaque niveau) + Serialisation (Meilleur Score par niveau)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Niveaux(Parametre pour chaque niveau) + Serialisation (Meilleur Score par niveau)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Modele/Cocktail.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/Controller/JeuController.java</url>
+          <line>416</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Modele/Cocktail.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Modele/Cocktail.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jrt://C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2019.2.4/jbr!/java.base/java/util/AbstractList.class</url>
-          <line>137</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Modele/SauvegardeGestion.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Modele/SauvegardeGestion.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="29" />
+          <url>file://$PROJECT_DIR$/src/Controller/JeuController.java</url>
+          <line>414</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/L_Esc_O_Bar$Main.ic" NAME="Main Coverage Results" MODIFIED="1608213723100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

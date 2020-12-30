@@ -14,6 +14,8 @@ public class Partie implements Externalizable {
 
     private final IntegerProperty meilleurScore = new SimpleIntegerProperty();
 
+    private final IntegerProperty scoreAAtteindre = new SimpleIntegerProperty();
+
     private IntegerProperty tpsPartie = new SimpleIntegerProperty();
 
     private int niveau;
@@ -95,6 +97,18 @@ public class Partie implements Externalizable {
         this.niveau = niveau;
     }
 
+    public int getScoreAAtteindre() {
+        return scoreAAtteindre.get();
+    }
+
+    public IntegerProperty scoreAAtteindreProperty() {
+        return scoreAAtteindre;
+    }
+
+    public void setScoreAAtteindre(int scoreAAtteindre) {
+        this.scoreAAtteindre.set(scoreAAtteindre);
+    }
+
     @Override
     public String toString() {
         return "Partie{" +
@@ -104,12 +118,23 @@ public class Partie implements Externalizable {
                 '}';
     }
 
+
+    /**
+     * serialize, le meilleur score et le niveau actuel
+     * @param objectOutput le flux ou l'on érit l'objet
+     * @throws IOException exception si la serialisation s'est mal passée
+     */
     @Override
     public void writeExternal(ObjectOutput objectOutput) throws IOException {
         objectOutput.writeInt(meilleurScore.get());
         objectOutput.writeInt(niveau);
     }
 
+    /**
+     * Deserialize un objet partie
+     * @param objectInput le flux d'ou on lit les données
+     * @throws IOException exception si la déserialisation s'est mal passée
+     */
     @Override
     public void readExternal(ObjectInput objectInput) throws IOException, ClassNotFoundException {
         meilleurScore.set(objectInput.readInt());

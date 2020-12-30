@@ -22,7 +22,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import javafx.util.Duration;
 import sample.Main;
 
@@ -54,6 +53,10 @@ public class JeuController implements Initializable {
     Label meilleurScore;
 
     @FXML
+    Label scoreAtteindre;
+
+
+    @FXML
     ListView<String> listCommande;
 
     @FXML
@@ -63,12 +66,21 @@ public class JeuController implements Initializable {
 
     ObservableList observableList = FXCollections.observableArrayList();
 
-
+    /**
+     * Met en place les données de l'interface
+     * Lie les propriétés de score, de temps, de meilleur score, et d'objectif de score.
+     * Lance le chrono de la partie
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         score.textProperty().bind(Bindings.convert(Main.p.scoreProperty()));
         tpsPartie.textProperty().bind(Bindings.convert(Main.p.tpsPartieProperty()));
         meilleurScore.textProperty().bind(Bindings.convert(Main.p.meilleurScoreProperty()));
+        scoreAtteindre.textProperty().bind(Bindings.convert(Main.p.scoreAAtteindreProperty()));
+
+
 
         try {
             chrono();
@@ -79,12 +91,14 @@ public class JeuController implements Initializable {
         setListCommande();
     }
 
+
+    /**
+     * Met dans la ListView la commande en cours, les boissons qu'il reste à servir
+     */
     public void setListCommande(){
         observableList.clear();
         listCommande.setOrientation(Orientation.HORIZONTAL);
-        //listCommande.setMouseTransparent(true);
         listCommande.setFocusTraversable(false);
-        //commandeEnCours.setOrientation(Orientation.HORIZONTAL);
         for (Boisson boisson: Main.p.getCommande().getCommande()
              ) {
             if (!boisson.isPrepare()){
@@ -136,6 +150,9 @@ public class JeuController implements Initializable {
         });
     }
 
+    /**
+     * Met dans la ListView les ingrédients pour un cocktail
+     */
     public void setListIngredients(){
         observableIngredients.clear();
         for (Boisson b: Main.p.getCommandeEnCours().getCommande()
@@ -150,22 +167,38 @@ public class JeuController implements Initializable {
         listIngredients.setItems(observableIngredients);
     }
 
-
+    /**
+     * Sert la boisson en paramètre à la commande en cours si elle est présente
+     * Regarde si la commande est entièrement préparé pour passer à une nouvelle commande
+     * @param b
+     */
     public void servir(Boisson b){
+        boolean inCommande = false;
         for (Boisson  boisson :  Main.p.getCommande().getCommande()) {
                 if (boisson.equals(b) && !boisson.isPrepare()){
                     boisson.setPrepare(true);
                     Main.p.setScore(Main.p.getScore() + boisson.getScore());
+                    inCommande = true;
                     if (Main.p.getCommande().verifCommande()){
                         Main.p.genererCommandes();
                     }
                     break;
                 }
         }
+        if (!inCommande){
+            Main.p.setScore(Main.p.getScore() - b.getScore());
+
+        }
         listCommande.getItems().clear();
         setListCommande();
     }
 
+    /**
+     * Fonction appelé lors du clic sur un verre
+     * Ajoute une biere dans la commande en cours avec le bon verre pour un clic sur un verre à bière
+     * Pour un clic sur un verre à cocktail, si bon ordre dans les ingredients sert le cocktail sinon affiche un message de rappel
+     * @param event
+     */
     public void clicVerre(MouseEvent event){
         ImageView selectVerre = (ImageView)event.getSource();
         switch(selectVerre.getId()) {
@@ -183,7 +216,7 @@ public class JeuController implements Initializable {
                     System.out.println("pas bon");
                     Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
                     Toast.makeText(stage,"Rappel Ordre Mojito : Menthe - Citron - Glace - Rhum - Shaker",5000,500,500);
-                    Main.p.setScore(Main.p.getScore() - 20);
+                    Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
                 }
                 break;
             case "verreMargarita" :
@@ -194,7 +227,7 @@ public class JeuController implements Initializable {
                     setListIngredients();
                 }
                 else{
-                    Main.p.setScore(Main.p.getScore() - 20);
+                    Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
                     Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
                     Toast.makeText(stage,"Rappel Ordre Margarita : Citron - Glace - Tequila - Shaker",5000,500,500);
                 }
@@ -202,8 +235,14 @@ public class JeuController implements Initializable {
         }
     }
 
-
-
+    /**
+     * Fonction appelé lors du clic sur un ingrédient
+     * Ajoute a liste d'ingredient d'un cocktail de la commande en cours
+     * Supprime le contenue de la liste d'ingredient lors du clic sur la poubelle
+     * @param event
+     * @throws InterruptedException
+     * @throws IOException
+     */
     public void clicIngredient(MouseEvent event) throws InterruptedException, IOException {
         ImageView selectIngredient = (ImageView)event.getSource();
         Cocktail cocktail;
@@ -321,6 +360,11 @@ public class JeuController implements Initializable {
     }
 
 
+    /**
+     * Fonction appelé ors du clic sur la tireuse ou le friigo
+     * Elle sert alors une biere ou un soda selon le clic
+     * @param event
+     */
     public void setOnCliked(MouseEvent event){
         ImageView selectBoisson = (ImageView)event.getSource();
         switch(selectBoisson.getId()){
@@ -347,17 +391,13 @@ public class JeuController implements Initializable {
             case "soda":
                 servir(new Soda());
                 break;
-            case"cocktail":
-                for (Boisson b : Main.p.getCommandeEnCours().getCommande()
-                ) {
-                    if (b.equals(new Cocktail(new Verre(Verre.typeVerre.ENV)))){
-                        servir(b);
-                    }
-                }
-                break;
         }
     }
 
+    /**
+     * Gestion du temps de la partie, affiche une nouvelle fenêtre lorsque le temps est fini.
+     * @throws IOException
+     */
     public void chrono() throws IOException {
         Timeline temps = new Timeline();
         Main.p.setTpsPartie(Main.p.getTpsPartie());
@@ -372,17 +412,33 @@ public class JeuController implements Initializable {
                     if (Main.p.getTpsPartie() == 0){
                             temps.stop();
                             Scene Scene;
-							try {
-								Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/Fin.fxml")));
-								Stage newFenetre = new Stage();
-	                            newFenetre.setScene(Scene);
-	                            newFenetre.initOwner(Main.getPrimaryStage());
-	                            newFenetre.setResizable(false);
-	                            newFenetre.show();
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
+                            if (Main.p.getScore() < Main.p.getScoreAAtteindre()){
+                                try {
+                                    Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/FinDefaite.fxml")));
+                                    Stage newFenetre = new Stage();
+                                    newFenetre.setScene(Scene);
+                                    newFenetre.initOwner(Main.getPrimaryStage());
+                                    newFenetre.setResizable(false);
+                                    newFenetre.show();
+                                } catch (IOException e) {
+                                    // TODO Auto-generated catch block
+                                    e.printStackTrace();
+                                }
+                            }
+                            else{
+                                try {
+                                    Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/FinVictoire.fxml")));
+                                    Stage newFenetre = new Stage();
+                                    newFenetre.setScene(Scene);
+                                    newFenetre.initOwner(Main.getPrimaryStage());
+                                    newFenetre.setResizable(false);
+                                    newFenetre.show();
+                                } catch (IOException e) {
+                                    // TODO Auto-generated catch block
+                                    e.printStackTrace();
+                                }
+                            }
+
                 }
             }
         });

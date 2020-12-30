@@ -2,7 +2,6 @@ package Modele;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 
 public class Cocktail extends Boisson{
 
@@ -18,7 +17,7 @@ public class Cocktail extends Boisson{
 
     private LinkedList<Ingredient> ingredients = new LinkedList<>();
 
-    private static final int valeur = 30;
+    public static final int VALEUR = 30;
 
     private boolean shake=false;
 
@@ -38,10 +37,18 @@ public class Cocktail extends Boisson{
         this.verre = verre;
     }
 
+    /**
+     * Ajoute un ingrédient à la fin de la liste d'ingrédients
+     * @param ingredient
+     */
     public void addIngredient(Ingredient ingredient){
         ingredients.addLast(ingredient);
     }
 
+    /**
+     * Vérifie si les ingrédients contenue dans la liste d'ingredients sont les bons et dans le bon ordre
+     * @return true si c'est le bon ordre sinon false
+     */
     public boolean verifOrdreIngredient(){
 
             if(ingredients.equals(listMojito) && isShake()){
@@ -69,7 +76,7 @@ public class Cocktail extends Boisson{
 
     @Override
     public int getScore(){
-        return valeur;
+        return VALEUR;
     }
 
 

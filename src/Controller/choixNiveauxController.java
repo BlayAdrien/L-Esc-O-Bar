@@ -22,8 +22,11 @@ public class choixNiveauxController implements Initializable {
 
     }
 
-
-
+    /**
+     * Fonction appelé lors du clic sur un niveau, lance le niveau en question
+     * @param event
+     * @throws IOException
+     */
     public void clicNiveau(ActionEvent event) throws IOException {
         Button select = (Button) event.getSource();
         Scene Scene;

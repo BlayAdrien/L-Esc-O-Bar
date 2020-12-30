@@ -1,7 +1,5 @@
 package Modele;
 
-import java.util.Objects;
-
 public class Biere extends Boisson {
 
 
@@ -13,7 +11,7 @@ public class Biere extends Boisson {
 
     private Verre verre;
 
-    private static final int valeur = 10;
+    public static final int VALEUR = 20;
 
     public Biere(choixBiere typeBiere) {
         super(typeBiere.toString());
@@ -39,7 +37,7 @@ public class Biere extends Boisson {
 
     @Override
     public int getScore(){
-        return valeur;
+        return VALEUR;
     }
 
     @Override

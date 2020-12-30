@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Soda extends Boisson {
 
-    private static final int valeur = 10;
+    public static final int VALEUR = 10;
 
     public Soda() {
         super("Soda");
@@ -20,7 +20,7 @@ public class Soda extends Boisson {
 
     @Override
     public int getScore(){
-        return valeur;
+        return VALEUR;
     }
 
 

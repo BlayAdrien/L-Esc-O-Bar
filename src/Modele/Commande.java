@@ -30,6 +30,12 @@ public class Commande{
         return commande;
     }
 
+
+    /**
+     * Genere un commande avec un nombre et un type de boissons aléatoire
+     * @param avecCocktail
+     * @return une commande qui contient des boissons aléatoires
+     */
     public Commande genererCommande(boolean avecCocktail) {
         int choixBoisson = 3;
         if (avecCocktail){
@@ -60,6 +66,10 @@ public class Commande{
         return this;
     }
 
+    /**
+     * Verifie si toutes les boissons de la commande sont prêtes
+     * @return true si toutes les boissons sont prêtes sinon false
+     */
     public boolean verifCommande(){
         boolean prete = true;
         for (Boisson boisson : commande
@@ -72,7 +82,10 @@ public class Commande{
         return prete;
     }
 
-
+    /**
+     * Ajoute une boisson à la liste de boissons
+     * @param boisson
+     */
     public void addBoisson(Boisson boisson){
         this.commande.add(boisson);
     }
@@ -85,6 +98,10 @@ public class Commande{
         this.nbBoissonMax = nbBoissonMax;
     }
 
+    /**
+     * Renvoie un cocktail contenue dans la commande en cours
+     * @return
+     */
     public Cocktail searchCocktail(){
         for (Boisson b: commande
              ) {
@@ -95,6 +112,11 @@ public class Commande{
         return null;
     }
 
+    /**
+     *     Renvoie un cocktail contenue dans la commande en cours en spécifiant son type
+      * @param typeCocktail
+     * @return
+     */
     public Cocktail searchCocktail(Cocktail.TypeCocktail typeCocktail){
         for (Boisson b: commande
         ) {
