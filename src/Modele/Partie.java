@@ -32,6 +32,8 @@ public class Partie implements Externalizable {
     }
 
     public Partie(int tpsPartie, int niveau) {
+        commande = new Commande();
+        commandeEnCours = new Commande();
         this.setTpsPartie(tpsPartie);
         this.niveau = niveau;
     }
