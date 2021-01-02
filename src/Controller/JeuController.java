@@ -183,7 +183,6 @@ public class JeuController implements Initializable {
         boolean inCommande = false;
         for (Boisson  boisson :  Main.p.getCommande().getCommande()) {
                 if (boisson.equals(b) && !boisson.isPrepare()){
-                    System.out.println(b.getName());
 
                     switch (b.getName()){
                         case"BLONDE" :

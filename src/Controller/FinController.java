@@ -35,9 +35,7 @@ public class FinController implements Initializable {
 	@FXML
     void rejouer(ActionEvent event) throws IOException {
 		Main.save.sauvegarder(Main.p);
-		Main.p = new Partie();
 		Main.p = Main.save.charger(Main.p.getNiveau());
-
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
        	stage.setScene(Scene);
