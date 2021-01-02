@@ -20,9 +20,7 @@ public class Ingredient {
 
     @Override
     public String toString() {
-        return "Ingredient{" +
-                "nom='" + type + '\'' +
-                '}';
+        return type.toString();
     }
 
 

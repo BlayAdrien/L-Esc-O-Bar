@@ -180,6 +180,7 @@ public class JeuController implements Initializable {
                     Main.p.setScore(Main.p.getScore() + boisson.getScore());
                     inCommande = true;
                     if (Main.p.getCommande().verifCommande()){
+                        Main.p.setScore(Main.p.getScore() + 50);
                         Main.p.genererCommandes();
                     }
                     break;
@@ -206,31 +207,47 @@ public class JeuController implements Initializable {
                 Main.p.getCommandeEnCours().addBoisson(new Biere(new Verre(Verre.typeVerre.CYLINDRE)));
                 break;
             case "verreMojito" :
-                if (Main.p.getCommandeEnCours().searchCocktail().verifOrdreIngredient()){
-                    servir(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO));
-                    Main.p.getCommandeEnCours().getCommande().remove(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO));
-                    Main.p.setEnPreparation(false);
-                    setListIngredients();
+                if (Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO) == null){
+                    Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                    Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
+                    Toast.makeText(stage,"Mauvais Verre",3000,500,500);
                 }
                 else{
-                    System.out.println("pas bon");
-                    Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
-                    Toast.makeText(stage,"Rappel Ordre Mojito : Menthe - Citron - Glace - Rhum - Shaker",5000,500,500);
-                    Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                    if (Main.p.getCommandeEnCours().searchCocktail().verifOrdreIngredient()){
+                        servir(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO));
+                        Main.p.getCommandeEnCours().getCommande().remove(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO));
+                        Main.p.setEnPreparation(false);
+                        setListIngredients();
+                    }
+                    else{
+                        System.out.println("pas bon");
+                        Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
+                        Toast.makeText(stage,"Rappel Ordre Mojito : Menthe - Citron - Glace - Rhum - Shaker",5000,500,500);
+                        Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                    }
                 }
+
                 break;
             case "verreMargarita" :
-                if (Main.p.getCommandeEnCours().searchCocktail().verifOrdreIngredient()){
-                    servir(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA));
-                    Main.p.getCommandeEnCours().getCommande().remove(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA));
-                    Main.p.setEnPreparation(false);
-                    setListIngredients();
+                if (Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA) == null){
+                    Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                    Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
+                    Toast.makeText(stage,"Mauvais Verre",3000,500,500);
                 }
                 else{
-                    Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
-                    Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
-                    Toast.makeText(stage,"Rappel Ordre Margarita : Citron - Glace - Tequila - Shaker",5000,500,500);
+                    if (Main.p.getCommandeEnCours().searchCocktail().verifOrdreIngredient()){
+                        servir(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA));
+                        Main.p.getCommandeEnCours().getCommande().remove(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA));
+                        Main.p.setEnPreparation(false);
+                        setListIngredients();
+                    }
+                    else{
+                        Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                        Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
+                        Toast.makeText(stage,"Rappel Ordre Margarita : Citron - Glace - Tequila - Shaker",5000,500,500);
+                    }
                 }
+
                 break;
         }
     }
@@ -249,7 +266,7 @@ public class JeuController implements Initializable {
         switch (selectIngredient.getId()){
             case "citron":
                 if (!Main.p.isEnPreparation()){
-                    cocktail = new Cocktail();
+                    cocktail = new Cocktail(Cocktail.TypeCocktail.MARGARITA);
                     cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.CITRON));
                     Main.p.setEnPreparation(true);
                     Main.p.getCommandeEnCours().getCommande().add(cocktail);
@@ -267,7 +284,7 @@ public class JeuController implements Initializable {
             case "menthe":
 
                 if (!Main.p.isEnPreparation()){
-                    cocktail = new Cocktail();
+                    cocktail = new Cocktail(Cocktail.TypeCocktail.MOJITO);
                     cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.MENTHE));
                     Main.p.setEnPreparation(true);
                     Main.p.getCommandeEnCours().getCommande().add(cocktail);
@@ -345,7 +362,7 @@ public class JeuController implements Initializable {
                     newFenetre.initOwner(Main.getPrimaryStage());
                     newFenetre.setResizable(false);
                     newFenetre.show();
-                    PauseTransition pause = new PauseTransition(Duration.seconds(5));
+                    PauseTransition pause = new PauseTransition(Duration.seconds(3));
                     pause.setOnFinished(e -> ((Stage)(newFenetre.getScene().getWindow())).close());
                     pause.play();
                     cocktail.setShake(true);

@@ -4,26 +4,15 @@ import java.util.ArrayList;
 
 public class Commande{
 
-    private Double patience = 30.00;
-
-    private int nbBoissonMax = 4;
+    private int nbBoissonMax;
 
     private ArrayList<Boisson> commande = new ArrayList<>();
 
     public Commande() {
     }
 
-    public Commande(Double patience) {
-        this.patience = patience;
-    }
-
-    public Commande(Double patience, ArrayList<Boisson> commande) {
-        this.patience = patience;
+    public Commande(ArrayList<Boisson> commande) {
         this.commande = commande;
-    }
-
-    public Double getPatience() {
-        return patience;
     }
 
     public ArrayList<Boisson> getCommande() {
@@ -42,7 +31,7 @@ public class Commande{
              choixBoisson = 5;
          }
         int nbBoissons = (int) (Math.random()*(nbBoissonMax)) + 1;
-        for (int i = -5; i < nbBoissons; i++) {
+        for (int i = 0; i < nbBoissons; i++) {
             int boisson = (int) (Math.random()*(choixBoisson)) + 1;
             switch (boisson) {
                 case 1:
@@ -90,13 +79,7 @@ public class Commande{
         this.commande.add(boisson);
     }
 
-    public int getNbBoissonMax() {
-        return nbBoissonMax;
-    }
 
-    public void setNbBoissonMax(int nbBoissonMax) {
-        this.nbBoissonMax = nbBoissonMax;
-    }
 
     /**
      * Renvoie un cocktail contenue dans la commande en cours
@@ -125,6 +108,10 @@ public class Commande{
             }
         }
         return null;
+    }
+
+    public void setNbBoissonMax(int nbBoissonMax) {
+        this.nbBoissonMax = nbBoissonMax;
     }
 
     @Override
