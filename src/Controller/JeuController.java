@@ -182,9 +182,72 @@ public class JeuController implements Initializable {
         boolean inCommande = false;
         for (Boisson  boisson :  Main.p.getCommande().getCommande()) {
                 if (boisson.equals(b) && !boisson.isPrepare()){
-                    boisson.setPrepare(true);
-                    Main.p.setScore(Main.p.getScore() + boisson.getScore());
-                    inCommande = true;
+                    System.out.println(b.getName());
+
+                    switch (b.getName()){
+                        case"BLONDE" :
+                            if (((Biere)b).verifVerre()){
+                                boisson.setPrepare(true);
+                                Main.p.setScore(Main.p.getScore() + boisson.getScore());
+                                inCommande = true;
+
+                        }
+                            else{
+                                Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                                Stage stage = (Stage) biereBlonde.getScene().getWindow();
+                                Toast.makeText(stage,"Mauvais Verre",3000,500,500);
+                            }
+
+                            break;
+                        case"BRUNE" :
+                            if (((Biere)b).verifVerre()){
+                                boisson.setPrepare(true);
+                                Main.p.setScore(Main.p.getScore() + boisson.getScore());
+                                inCommande = true;
+
+                            }
+                            else{
+                                Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                                Stage stage = (Stage) biereBlonde.getScene().getWindow();
+                                Toast.makeText(stage,"Mauvais Verre",3000,500,500);
+                            }
+
+                            break;
+                        case"MOJITO":
+                            if (((Cocktail)b).verifVerre()){
+                                boisson.setPrepare(true);
+                                Main.p.setScore(Main.p.getScore() + boisson.getScore());
+                                inCommande = true;
+                            }
+                            else{
+                                Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                                Stage stage = (Stage) biereBlonde.getScene().getWindow();
+                                Toast.makeText(stage,"Mauvais Verre",3000,500,500);
+                            }
+                            break;
+
+                        case"MARGARITA":
+                            if (((Cocktail)b).verifVerre()){
+                                boisson.setPrepare(true);
+                                Main.p.setScore(Main.p.getScore() + boisson.getScore());
+                                inCommande = true;
+                            }
+                            else{
+                                Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                                Stage stage = (Stage) biereBlonde.getScene().getWindow();
+                                Toast.makeText(stage,"Mauvais Verre",3000,500,500);
+                            }
+                            break;
+                        case"Soda":
+                            boisson.setPrepare(true);
+                            Main.p.setScore(Main.p.getScore() + boisson.getScore());
+                            inCommande = true;
+                            break;
+                    }
+
+
+
+
                     if (Main.p.getCommande().verifCommande()){
                         Main.p.setScore(Main.p.getScore() + 50);
                         Main.p.genererCommandes();
@@ -213,14 +276,12 @@ public class JeuController implements Initializable {
                 Main.p.getCommandeEnCours().addBoisson(new Biere(new Verre(Verre.typeVerre.CYLINDRE)));
                 break;
             case "verreMojito" :
-                if (Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO) == null){
-                    Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
-                    Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
-                    Toast.makeText(stage,"Mauvais Verre",3000,500,500);
-                }
-                else{
-                    if (Main.p.getCommandeEnCours().searchCocktail().verifOrdreIngredient()){
-                        servir(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO));
+                Cocktail mojito = Main.p.getCommandeEnCours().searchCocktail();
+
+                mojito.getVerre().setType(Verre.typeVerre.ENU);
+
+                    if (mojito.verifOrdreIngredient()){
+                        servir(Main.p.getCommandeEnCours().searchCocktail());
                         Main.p.getCommandeEnCours().getCommande().remove(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MOJITO));
                         Main.p.setEnPreparation(false);
                         setListIngredients();
@@ -231,18 +292,15 @@ public class JeuController implements Initializable {
                         Toast.makeText(stage,"Rappel Ordre Mojito : Menthe - Citron - Glace - Rhum - Shaker",5000,500,500);
                         Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
                     }
-                }
+
 
                 break;
             case "verreMargarita" :
-                if (Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA) == null){
-                    Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
-                    Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
-                    Toast.makeText(stage,"Mauvais Verre",3000,500,500);
-                }
-                else{
-                    if (Main.p.getCommandeEnCours().searchCocktail().verifOrdreIngredient()){
-                        servir(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA));
+                Cocktail margarita = Main.p.getCommandeEnCours().searchCocktail();
+                margarita.getVerre().setType(Verre.typeVerre.ENV);
+
+                    if (margarita.verifOrdreIngredient()){
+                        servir(Main.p.getCommandeEnCours().searchCocktail());
                         Main.p.getCommandeEnCours().getCommande().remove(Main.p.getCommandeEnCours().searchCocktail(Cocktail.TypeCocktail.MARGARITA));
                         Main.p.setEnPreparation(false);
                         setListIngredients();
@@ -252,7 +310,7 @@ public class JeuController implements Initializable {
                         Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
                         Toast.makeText(stage,"Rappel Ordre Margarita : Citron - Glace - Tequila - Shaker",5000,500,500);
                     }
-                }
+
 
                 break;
         }
@@ -279,7 +337,7 @@ public class JeuController implements Initializable {
                 }
                 else{
                     cocktail = Main.p.getCommandeEnCours().searchCocktail();
-                    if (cocktail !=null){
+                    if (cocktail != null){
                        cocktail.addIngredient(new Ingredient(Ingredient.TypeIngredient.CITRON));
                     }
                     else{

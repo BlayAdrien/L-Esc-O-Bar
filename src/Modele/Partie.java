@@ -36,6 +36,11 @@ public class Partie implements Externalizable {
         this.niveau = niveau;
     }
 
+
+    /**
+     *Genere un nouvelle commande
+     * Avec des cocktails pour le niveau 3 sinon sans
+     */
     public void genererCommandes(){
         if (niveau > 2){
             commande.genererCommande(true);
@@ -46,22 +51,43 @@ public class Partie implements Externalizable {
         }
     }
 
+
+    /**
+     * retourne si utilisateur est entrain de préparer un cocktail ou pas
+     * @return
+     */
     public boolean isEnPreparation() {
         return enPreparation;
     }
 
+    /**
+     * Modifie la valeur de enPreparation
+     * @param enPreparation
+     */
     public void setEnPreparation(boolean enPreparation) {
         this.enPreparation = enPreparation;
     }
 
+    /**
+     * retourne la commande
+     * @return
+     */
     public Commande getCommande() {
         return commande;
     }
 
+    /**
+     * retourne la commande qui est entrain d'être préparé
+     * @return
+     */
     public Commande getCommandeEnCours() {
         return commandeEnCours;
     }
 
+    /**
+     * Getters et setters du score
+     * @return
+     */
     public Integer getScore() {return score.get();}
     public IntegerProperty scoreProperty() {return score;}
     public void setScore(Integer score) {
@@ -71,38 +97,49 @@ public class Partie implements Externalizable {
         }
     }
 
+    /**
+     * getters et settters du Meilleur Score
+     * @return
+     */
     public Integer getMeilleurScore() {return meilleurScore.get();}
     public IntegerProperty meilleurScoreProperty() {return meilleurScore;}
     public void setMeilleurScore(Integer score) {this.meilleurScore.set(score);}
 
+    /**
+     * getters et setters du temps de la partie
+     * @return
+     */
     public int getTpsPartie() {
         return tpsPartie.get();
     }
-
     public IntegerProperty tpsPartieProperty() {
         return tpsPartie;
     }
-
     public void setTpsPartie(int tpsPartie) {
         this.tpsPartie.set(tpsPartie);
     }
 
+    /**
+     * getters et setters du niveau
+     * @return
+     */
     public int getNiveau() {
         return niveau;
     }
-
     public void setNiveau(int niveau) {
         this.niveau = niveau;
     }
 
+    /**
+     * getters et setters du score à atteindre
+     * @return
+     */
     public int getScoreAAtteindre() {
         return scoreAAtteindre.get();
     }
-
     public IntegerProperty scoreAAtteindreProperty() {
         return scoreAAtteindre;
     }
-
     public void setScoreAAtteindre(int scoreAAtteindre) {
         this.scoreAAtteindre.set(scoreAAtteindre);
     }

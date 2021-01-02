@@ -15,10 +15,6 @@ public class Commande{
         this.commande = commande;
     }
 
-    public ArrayList<Boisson> getCommande() {
-        return commande;
-    }
-
 
     /**
      * Genere un commande avec un nombre et un type de boissons aléatoire
@@ -26,6 +22,7 @@ public class Commande{
      * @return une commande qui contient des boissons aléatoires
      */
     public Commande genererCommande(boolean avecCocktail) {
+        commande.removeAll(commande);
         int choixBoisson = 3;
         if (avecCocktail){
              choixBoisson = 5;
@@ -51,7 +48,6 @@ public class Commande{
                     break;
             }
         }
-
         return this;
     }
 
@@ -110,8 +106,20 @@ public class Commande{
         return null;
     }
 
+    /**
+     *Modifie le nombre de boissons max pour la commande
+     * @param nbBoissonMax
+     */
     public void setNbBoissonMax(int nbBoissonMax) {
         this.nbBoissonMax = nbBoissonMax;
+    }
+
+    /**
+     * Retourna la liste de boissons de la commande
+     * @return
+     */
+    public ArrayList<Boisson> getCommande() {
+        return commande;
     }
 
     @Override

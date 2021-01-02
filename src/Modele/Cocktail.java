@@ -21,6 +21,8 @@ public class Cocktail extends Boisson{
 
     private boolean shake=false;
 
+    private Verre verre = new Verre();
+
     public Cocktail() {
         super();
     }
@@ -31,12 +33,26 @@ public class Cocktail extends Boisson{
 
     }
 
+    public void test(){
+        System.out.println("teste");
+    }
+
     /**
      * Ajoute un ingrédient à la fin de la liste d'ingrédients
      * @param ingredient
      */
     public void addIngredient(Ingredient ingredient){
         ingredients.addLast(ingredient);
+    }
+
+    public boolean verifVerre(){
+        if( this.typeCocktail == TypeCocktail.MOJITO && this.verre.getType() == Verre.typeVerre.ENU){
+            return true;
+        }
+        if (this.typeCocktail == TypeCocktail.MARGARITA && this.verre.getType() == Verre.typeVerre.ENV){
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -62,14 +78,12 @@ public class Cocktail extends Boisson{
      * @return
      */
     public LinkedList<Ingredient> getIngredients() {
-        return ingredients;
+        return this.ingredients;
     }
 
     @Override
     public String toString() {
-        return "Cocktail{" +
-                "nom='" + super.getName() + '\'' +
-                '}';
+        return "Cocktail{nom='" + super.getName() + '\'' + '}';
     }
 
     @Override
@@ -78,6 +92,10 @@ public class Cocktail extends Boisson{
     }
 
 
+    /**
+     * setter du type de cocktail
+     * @param typeCocktail
+     */
     public void setTypeCocktail(TypeCocktail typeCocktail) {
         this.typeCocktail = typeCocktail;
     }
@@ -90,10 +108,26 @@ public class Cocktail extends Boisson{
         return typeCocktail == cocktail.typeCocktail;
     }
 
+    public Verre getVerre() {
+        return verre;
+    }
+
+    public void setVerre(Verre verre) {
+        this.verre = verre;
+    }
+
+    /**
+     * retourne si le cocktail à été shake ou pas
+     * @return
+     */
     public boolean isShake() {
         return shake;
     }
 
+    /**
+     * modifie la valeur de shake
+     * @param shake
+     */
     public void setShake(boolean shake) {
         this.shake = shake;
     }

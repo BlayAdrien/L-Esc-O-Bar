@@ -8,6 +8,9 @@ public class Verre {
 
     private typeVerre type;
 
+    public Verre() {
+    }
+
     public Verre(typeVerre type) {
         this.type = type;
     }

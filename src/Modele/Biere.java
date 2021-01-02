@@ -1,6 +1,7 @@
 package Modele;
 
-public class Biere extends Boisson {
+public class Biere extends Boisson implements IVerre{
+
 
 
     public enum  choixBiere{
@@ -9,7 +10,7 @@ public class Biere extends Boisson {
 
     private choixBiere typeBiere;
 
-    private Verre verre;
+    private Verre verre = new Verre();
 
     public static final int VALEUR = 20;
 
@@ -22,11 +23,20 @@ public class Biere extends Boisson {
         this.verre = verre;
     }
 
+    /**
+     * setters du type de biere
+     * @param typeBiere
+     */
     public void setTypeBiere(choixBiere typeBiere) {
         this.typeBiere = typeBiere;
         super.setName(typeBiere.toString());
     }
 
+
+    @Override
+    public boolean verifVerre() {
+        return (this.verre.getType() == Verre.typeVerre.CYLINDRE);
+    }
 
     @Override
     public String toString() {
