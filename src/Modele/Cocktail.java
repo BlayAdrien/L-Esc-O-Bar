@@ -9,9 +9,9 @@ public class Cocktail extends Boisson{
         MARGARITA, MOJITO
     }
 
-    private final  LinkedList<Ingredient> listMojito = new LinkedList<>(Arrays.asList(new Ingredient(Ingredient.TypeIngredient.MENTHE), new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.RHUM)));
+    private final  LinkedList<Ingredient> LISTMOJITO = new LinkedList<>(Arrays.asList(new Ingredient(Ingredient.TypeIngredient.MENTHE), new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.RHUM)));
 
-    private final  LinkedList<Ingredient> listMargarita = new LinkedList<>(Arrays.asList( new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.TEQUILA)));
+    private final  LinkedList<Ingredient> LISTMARGARITA = new LinkedList<>(Arrays.asList( new Ingredient(Ingredient.TypeIngredient.CITRON),new Ingredient(Ingredient.TypeIngredient.GLACE),new Ingredient(Ingredient.TypeIngredient.TEQUILA)));
 
     private TypeCocktail typeCocktail;
 
@@ -21,8 +21,6 @@ public class Cocktail extends Boisson{
 
     private boolean shake=false;
 
-    private Verre verre;
-
     public Cocktail() {
         super();
     }
@@ -31,10 +29,6 @@ public class Cocktail extends Boisson{
         super(typeCocktail.toString());
         this.typeCocktail = typeCocktail;
 
-    }
-
-    public Cocktail(Verre verre) {
-        this.verre = verre;
     }
 
     /**
@@ -51,18 +45,22 @@ public class Cocktail extends Boisson{
      */
     public boolean verifOrdreIngredient(){
 
-            if(ingredients.equals(listMojito) && isShake()){
+            if(ingredients.equals(LISTMOJITO) && isShake()){
                 this.setTypeCocktail(TypeCocktail.MOJITO);
                 return true;
             }
 
-            if(ingredients.equals(listMargarita) && isShake()){
+            if(ingredients.equals(LISTMARGARITA) && isShake()){
                 this.setTypeCocktail(TypeCocktail.MARGARITA);
                 return true;
             }
         return false;
     }
 
+    /**
+     * Retourne la liste d'ingrédients du cocktail
+     * @return
+     */
     public LinkedList<Ingredient> getIngredients() {
         return ingredients;
     }
@@ -79,10 +77,6 @@ public class Cocktail extends Boisson{
         return VALEUR;
     }
 
-
-    public TypeCocktail getTypeCocktail() {
-        return typeCocktail;
-    }
 
     public void setTypeCocktail(TypeCocktail typeCocktail) {
         this.typeCocktail = typeCocktail;

@@ -2,30 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac70177-d64f-479a-888b-f34df3298232" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_swt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L-Esc-O-Bar.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vue/FinDefaite.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vue/FinVictoire.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/L-Esc-O-Bar.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/JeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JeuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/choixNiveauxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/choixNiveauxController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/shaker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Biere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modele/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Ingredient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modele/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Soda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Soda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vue/Fin.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +39,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Vue" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\src\Controller" />
+      <recent name="C:\Users\nicob\Documents\Lpro RTAI\L-Esc-O-Bar\ressources" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
@@ -73,20 +63,53 @@
       <option name="presentableId" value="Default" />
       <updated>1609251939272</updated>
     </task>
+    <task id="LOCAL-00001" summary="Documentation code">
+      <created>1609346318098</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609346318098</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Documentation code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Controller/JeuController.java</url>
-          <line>416</line>
-          <option name="timeStamp" value="1" />
+          <line>238</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller/JeuController.java</url>
-          <line>414</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/Modele/SauvegardeGestion.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

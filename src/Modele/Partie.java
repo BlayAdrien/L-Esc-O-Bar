@@ -24,9 +24,11 @@ public class Partie implements Externalizable {
 
     private Commande commande;
 
-    private Commande commandeEnCours = new Commande();
+    private Commande commandeEnCours;
 
     public Partie() {
+        commande = new Commande();
+        commandeEnCours = new Commande();
     }
 
     public Partie(int tpsPartie, int niveau) {
@@ -36,10 +38,10 @@ public class Partie implements Externalizable {
 
     public void genererCommandes(){
         if (niveau > 2){
-            commande = (new Commande().genererCommande(true));
+            commande.genererCommande(true);
         }
         else{
-            commande = (new Commande().genererCommande(false));
+            commande.genererCommande(false);
 
         }
     }
@@ -58,10 +60,6 @@ public class Partie implements Externalizable {
 
     public Commande getCommandeEnCours() {
         return commandeEnCours;
-    }
-
-    public void setCommandeEnCours(Commande commandeEnCours) {
-        this.commandeEnCours = commandeEnCours;
     }
 
     public Integer getScore() {return score.get();}

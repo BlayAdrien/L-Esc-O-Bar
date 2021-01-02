@@ -20,6 +20,7 @@ public class SauvegardeGestion {
 
                     partie.setTpsPartie(param[0]);
                     partie.setScoreAAtteindre(param[1]);
+                    partie.getCommande().setNbBoissonMax(param[2]);
                     in.close();
                     file.close();
 
