@@ -23,6 +23,9 @@ public class Accueil {
 	private Label play;
 	@FXML
 	private Label quit;
+	@FXML
+	private Label lvl;
+
 
 
 	private ResourceBundle bundle;
@@ -45,6 +48,7 @@ public class Accueil {
 		bundle = ResourceBundle.getBundle("Vue.labelText", locale);
 		play.setText(bundle.getString("play"));
 		rules.setText(bundle.getString("rules"));
+		lvl.setText(bundle.getString("lvl"));
 		quit.setText(bundle.getString("quit"));
 	}
 

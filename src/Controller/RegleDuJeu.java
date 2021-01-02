@@ -1,6 +1,5 @@
 package Controller;
 
-import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -20,6 +19,8 @@ public class RegleDuJeu {
 	private Label rules;
 	@FXML
 	private Label description;
+	@FXML
+	private Label retour;
 
 	private ResourceBundle bundle;
 	private Locale locale;
@@ -41,6 +42,7 @@ public class RegleDuJeu {
 		bundle = ResourceBundle.getBundle("Vue.labelText", locale);
 		rules.setText(bundle.getString("rules"));
 		description.setText(bundle.getString("description"));
+		retour.setText(bundle.getString("retour"));
 	}
 
 	@FXML

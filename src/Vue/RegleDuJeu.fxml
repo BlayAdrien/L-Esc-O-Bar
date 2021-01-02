@@ -18,7 +18,7 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#btnFr" text="FR" />
                   <Button mnemonicParsing="false" onAction="#btnEn" text="EN" />
-                  <Label alignment="BOTTOM_CENTER" text="Retour à l'accueil">
+                  <Label alignment="BOTTOM_CENTER" text="Retour à l'accueil" fx:id="retour">
                      <HBox.margin>
                         <Insets left="10.0" right="1.0" top="5.0" />
                      </HBox.margin>

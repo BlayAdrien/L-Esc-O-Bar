@@ -5,13 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-
+import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 import sample.Main;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class choixNiveauxController implements Initializable {
@@ -20,6 +21,47 @@ public class choixNiveauxController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
+
+    @FXML
+    private Label lvl1;
+    @FXML
+    private Label lvl2;
+    @FXML
+    private Label lvl3;
+    @FXML
+	private Label retour;
+
+    private ResourceBundle bundle;
+	private Locale locale;
+	public Button closeButton;
+
+	@FXML
+	private void btnEn(ActionEvent event){
+		loadLang("en");
+	}
+
+	@FXML
+	private void btnFr(ActionEvent event){
+		loadLang("fr");
+	}
+
+	@FXML
+	private void loadLang(String lang){
+		locale = new Locale(lang);
+		bundle = ResourceBundle.getBundle("Vue.labelText", locale);
+		lvl1.setText(bundle.getString("lvl1"));
+		lvl2.setText(bundle.getString("lvl2"));
+		lvl3.setText(bundle.getString("lvl3"));
+		retour.setText(bundle.getString("retour"));
+	}
+
+	@FXML
+    private void retourAccueil(ActionEvent event) throws IOException {
+		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+		Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/Accueil.fxml")));
+		stage.setScene(Scene);
+		stage.show();
     }
 
     /**
