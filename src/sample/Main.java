@@ -3,6 +3,8 @@ package sample;
 import Modele.Partie;
 import Modele.SauvegardeGestion;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -33,6 +35,14 @@ public class Main extends Application {
         }catch(Exception e) {
             e.printStackTrace();
         }
+        primaryStage.focusedProperty().addListener(new ChangeListener<Boolean>()
+        {
+          @Override
+          public void changed(ObservableValue<? extends Boolean> ov, Boolean onHidden, Boolean onShown)
+          {
+            primaryStage.close();
+          }
+        });
     }
 
     public static Stage getPrimaryStage() {

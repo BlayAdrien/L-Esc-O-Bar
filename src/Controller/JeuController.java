@@ -5,7 +5,10 @@ import Vue.Toast;
 import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Orientation;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
@@ -30,6 +34,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static java.lang.Thread.sleep;
+
+import java.awt.Graphics2D;
 
 public class JeuController implements Initializable {
 
@@ -437,10 +443,19 @@ public class JeuController implements Initializable {
                                     newFenetre.initOwner(Main.getPrimaryStage());
                                     newFenetre.setResizable(false);
                                     newFenetre.show();
+                                    newFenetre.focusedProperty().addListener(new ChangeListener<Boolean>()
+                                    {
+                                      @Override
+                                      public void changed(ObservableValue<? extends Boolean> ov, Boolean onHidden, Boolean onShown)
+                                      {
+                                        newFenetre.close();
+                                      }
+                                    });
                                 } catch (IOException e) {
                                     // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 }
+
                             }
                             else{
                                 try {
@@ -450,6 +465,14 @@ public class JeuController implements Initializable {
                                     newFenetre.initOwner(Main.getPrimaryStage());
                                     newFenetre.setResizable(false);
                                     newFenetre.show();
+                                    newFenetre.focusedProperty().addListener(new ChangeListener<Boolean>()
+                                    {
+                                      @Override
+                                      public void changed(ObservableValue<? extends Boolean> ov, Boolean onHidden, Boolean onShown)
+                                      {
+                                        newFenetre.close();
+                                      }
+                                    });
                                 } catch (IOException e) {
                                     // TODO Auto-generated catch block
                                     e.printStackTrace();

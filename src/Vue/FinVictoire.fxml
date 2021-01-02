@@ -15,7 +15,7 @@
             <DropShadow />
          </effect></Label>
       <Button fx:id="rejouer" mnemonicParsing="false" onAction="#rejouer" text="Rejouer " />
-      <Button fx:id="quitter" mnemonicParsing="false" onAction="#quitter" prefHeight="17.0" prefWidth="54.0" text="Quitter" />
+      <Button fx:id="closeButton" mnemonicParsing="false" onAction="#quitter" prefHeight="17.0" prefWidth="54.0" text="Quitter" />
       <Label fx:id="score" />
    </children>
 </VBox>

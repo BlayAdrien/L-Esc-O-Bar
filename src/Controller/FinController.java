@@ -7,8 +7,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
+
 import javafx.stage.Stage;
+import sample.Main;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,26 +23,27 @@ public class FinController implements Initializable {
     @FXML
     private Label score;
 
+    public Button closeButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
 
-    @FXML
-    void rejouer(ActionEvent event) {
-
-    }
-
-    @FXML
-    void quitter(ActionEvent event) throws IOException {
+	@FXML
+    void rejouer(ActionEvent event) throws IOException {
+		Main.save.sauvegarder(Main.p);
+		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/Accueil.fxml")));
-
-        Stage stage  = (Stage) quitter.getScene().getWindow();
-        stage.setScene(Scene);
+       	stage.setScene(Scene);
         stage.show();
-
     }
 
-
+    @FXML
+    private void quitter(ActionEvent event) {
+		Main.save.sauvegarder(Main.p);
+		Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
     }
+
+}
