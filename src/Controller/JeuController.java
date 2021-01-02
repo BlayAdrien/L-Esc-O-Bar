@@ -19,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Orientation;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -496,11 +497,9 @@ public class JeuController implements Initializable {
                             if (Main.p.getScore() < Main.p.getScoreAAtteindre()){
                                 try {
                                     Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/FinDefaite.fxml")));
-                                    Stage newFenetre = new Stage();
-                                    newFenetre.setScene(Scene);
-                                    newFenetre.initOwner(Main.getPrimaryStage());
-                                    newFenetre.setResizable(false);
-                                    newFenetre.show();
+                                    Stage stage = (Stage) biereBlonde.getScene().getWindow();
+                                    stage.setScene(Scene);
+                                    stage.show();
 
                                 } catch (IOException e) {
                                     // TODO Auto-generated catch block
