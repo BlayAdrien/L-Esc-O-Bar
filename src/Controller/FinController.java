@@ -1,5 +1,6 @@
 package Controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,7 +35,7 @@ public class FinController implements Initializable {
     void rejouer(ActionEvent event) throws IOException {
 		Main.save.sauvegarder(Main.p);
 		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/Accueil.fxml")));
+        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
        	stage.setScene(Scene);
         stage.show();
     }
@@ -42,8 +43,7 @@ public class FinController implements Initializable {
     @FXML
     private void quitter(ActionEvent event) {
 		Main.save.sauvegarder(Main.p);
-		Stage stage = (Stage) closeButton.getScene().getWindow();
-        stage.close();
+		Platform.exit();
     }
 
 }

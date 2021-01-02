@@ -443,14 +443,7 @@ public class JeuController implements Initializable {
                                     newFenetre.initOwner(Main.getPrimaryStage());
                                     newFenetre.setResizable(false);
                                     newFenetre.show();
-                                    newFenetre.focusedProperty().addListener(new ChangeListener<Boolean>()
-                                    {
-                                      @Override
-                                      public void changed(ObservableValue<? extends Boolean> ov, Boolean onHidden, Boolean onShown)
-                                      {
-                                        newFenetre.close();
-                                      }
-                                    });
+
                                 } catch (IOException e) {
                                     // TODO Auto-generated catch block
                                     e.printStackTrace();
@@ -465,14 +458,7 @@ public class JeuController implements Initializable {
                                     newFenetre.initOwner(Main.getPrimaryStage());
                                     newFenetre.setResizable(false);
                                     newFenetre.show();
-                                    newFenetre.focusedProperty().addListener(new ChangeListener<Boolean>()
-                                    {
-                                      @Override
-                                      public void changed(ObservableValue<? extends Boolean> ov, Boolean onHidden, Boolean onShown)
-                                      {
-                                        newFenetre.close();
-                                      }
-                                    });
+
                                 } catch (IOException e) {
                                     // TODO Auto-generated catch block
                                     e.printStackTrace();

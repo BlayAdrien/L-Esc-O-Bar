@@ -35,14 +35,7 @@ public class Main extends Application {
         }catch(Exception e) {
             e.printStackTrace();
         }
-        primaryStage.focusedProperty().addListener(new ChangeListener<Boolean>()
-        {
-          @Override
-          public void changed(ObservableValue<? extends Boolean> ov, Boolean onHidden, Boolean onShown)
-          {
-            primaryStage.close();
-          }
-        });
+
     }
 
     public static Stage getPrimaryStage() {
