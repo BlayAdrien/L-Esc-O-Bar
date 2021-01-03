@@ -13,6 +13,9 @@ public class Biere extends Boisson implements IVerre{
 
     private static final int VALEUR = 20;
 
+    public Biere() {
+    }
+
     public Biere(choixBiere typeBiere) {
         super(typeBiere.toString());
         this.typeBiere = typeBiere;
@@ -31,7 +34,10 @@ public class Biere extends Boisson implements IVerre{
         super.setName(typeBiere.toString());
     }
 
-
+    /**
+     * Vérifie que ce soit le bon verre
+     * @return
+     */
     @Override
     public boolean verifVerre() {
         return (this.verre.getType() == Verre.typeVerre.CYLINDRE);

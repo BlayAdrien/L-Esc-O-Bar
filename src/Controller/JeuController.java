@@ -443,17 +443,18 @@ public class JeuController implements Initializable {
             case "biereBlonde":
                 for (Boisson b : Main.p.getCommandeEnCours().getCommande()
                      ) {
-                    if (b.equals(new Biere(new Verre(Verre.typeVerre.CYLINDRE)))){
+                    if (b.equals(new Biere())){
                         ((Biere)b).setTypeBiere(Biere.choixBiere.BLONDE);
                         servir(b);
                         break;
                     }
+
                 }
                 break;
             case "biereBrune":
                 for (Boisson b : Main.p.getCommandeEnCours().getCommande()
                 ) {
-                    if (b.equals(new Biere(new Verre(Verre.typeVerre.CYLINDRE)))){
+                    if (b.equals(new Biere())){
                         ((Biere)b).setTypeBiere(Biere.choixBiere.BRUNE);
                         servir(b);
                         break;

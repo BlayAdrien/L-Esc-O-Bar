@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac70177-d64f-479a-888b-f34df3298232" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/FinControllerVictoire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Diagramme de classe.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Diagramme de classe.mdj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/JeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JeuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modele/Biere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Soda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Soda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/FinVictoire.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/FinVictoire.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,11 +37,11 @@
     <setting file="file://$PROJECT_DIR$/src/Modele/Cocktail.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Modele/Commande.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Modele/Soda.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="jar://$PROJECT_DIR$/../../../../../Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/ArrayList.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Modele/Verre.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Modele/Biere.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Modele/Boisson.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1mKp3K4RvByeA9Q83uM7Eq86RxY" />
   <component name="ProjectViewState">
@@ -52,8 +52,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/lib/javafx-sdk-11.0.2/lib/javafx-swt.jar" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -151,11 +151,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller/JeuController.java</url>
-          <line>241</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Controller/JeuController.java</url>
           <line>292</line>
