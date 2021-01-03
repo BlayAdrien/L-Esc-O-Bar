@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac70177-d64f-479a-888b-f34df3298232" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/FinControllerVictoire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/Diagramme de classe.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Diagramme de classe.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/JeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JeuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Biere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Biere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vue/FinVictoire.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/FinVictoire.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609615194186</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Niveau suivant">
+      <created>1609703767874</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609703767874</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -146,7 +151,8 @@
     <MESSAGE value="Modifs" />
     <MESSAGE value="test push" />
     <MESSAGE value="Resolution erreur" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolution erreur" />
+    <MESSAGE value="Niveau suivant" />
+    <option name="LAST_COMMIT_MESSAGE" value="Niveau suivant" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
