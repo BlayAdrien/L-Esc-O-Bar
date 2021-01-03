@@ -17,7 +17,7 @@ public class Cocktail extends Boisson{
 
     private LinkedList<Ingredient> ingredients = new LinkedList<>();
 
-    public static final int VALEUR = 30;
+    private static final int VALEUR = 30;
 
     private boolean shake=false;
 

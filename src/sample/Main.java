@@ -14,7 +14,7 @@ import javafx.stage.WindowEvent;
 
 public class Main extends Application {
     public static Partie p;
-    public static SauvegardeGestion save = new SauvegardeGestion();
+    public static SauvegardeGestion save = SauvegardeGestion.getSave();
     private static Stage primaryStage;
 
     @Override

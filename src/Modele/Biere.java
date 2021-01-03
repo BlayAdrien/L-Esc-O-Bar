@@ -3,7 +3,6 @@ package Modele;
 public class Biere extends Boisson implements IVerre{
 
 
-
     public enum  choixBiere{
         BLONDE,BRUNE
     }
@@ -12,7 +11,7 @@ public class Biere extends Boisson implements IVerre{
 
     private Verre verre = new Verre();
 
-    public static final int VALEUR = 20;
+    private static final int VALEUR = 20;
 
     public Biere(choixBiere typeBiere) {
         super(typeBiere.toString());

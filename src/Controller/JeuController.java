@@ -184,7 +184,7 @@ public class JeuController implements Initializable {
 
                         }
                             else{
-                                Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                                Main.p.setScore(Main.p.getScore() - boisson.getScore());
                                 Stage stage = (Stage) biereBlonde.getScene().getWindow();
                                 Toast.makeText(stage,"Mauvais Verre",3000,500,500);
                             }
@@ -198,7 +198,7 @@ public class JeuController implements Initializable {
 
                             }
                             else{
-                                Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                                Main.p.setScore(Main.p.getScore() - boisson.getScore());
                                 Stage stage = (Stage) biereBlonde.getScene().getWindow();
                                 Toast.makeText(stage,"Mauvais Verre",3000,500,500);
                             }
@@ -211,7 +211,7 @@ public class JeuController implements Initializable {
                                 inCommande = true;
                             }
                             else{
-                                Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                                Main.p.setScore(Main.p.getScore() - boisson.getScore());
                                 Stage stage = (Stage) biereBlonde.getScene().getWindow();
                                 Toast.makeText(stage,"Mauvais Verre",3000,500,500);
                             }
@@ -224,7 +224,7 @@ public class JeuController implements Initializable {
                                 inCommande = true;
                             }
                             else{
-                                Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                                Main.p.setScore(Main.p.getScore() - boisson.getScore());
                                 Stage stage = (Stage) biereBlonde.getScene().getWindow();
                                 Toast.makeText(stage,"Mauvais Verre",3000,500,500);
                             }
@@ -281,7 +281,7 @@ public class JeuController implements Initializable {
                         System.out.println("pas bon");
                         Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
                         Toast.makeText(stage,"Rappel Ordre Mojito : Menthe - Citron - Glace - Rhum - Shaker",5000,500,500);
-                        Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                        Main.p.setScore(Main.p.getScore() - mojito.getScore());
                     }
 
 
@@ -297,7 +297,7 @@ public class JeuController implements Initializable {
                         setListIngredients();
                     }
                     else{
-                        Main.p.setScore(Main.p.getScore() - Cocktail.VALEUR);
+                        Main.p.setScore(Main.p.getScore() - margarita.getScore());
                         Stage stage = (Stage)((ImageView) event.getSource()).getScene().getWindow();
                         Toast.makeText(stage,"Rappel Ordre Margarita : Citron - Glace - Tequila - Shaker",5000,500,500);
                     }

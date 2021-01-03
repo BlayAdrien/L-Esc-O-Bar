@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Soda extends Boisson {
 
-    public static final int VALEUR = 10;
+    private static final int VALEUR = 10;
 
     public Soda() {
         super("Soda");

@@ -10,6 +10,22 @@ import java.io.ObjectOutputStream;
 
 public class SauvegardeGestion {
 
+    private SauvegardeGestion(){}
+
+    private static SauvegardeGestion save =null;
+
+    /**
+     * retourne l'instance unique de la classe SauvegardeGestion
+     * @return
+     */
+    public static SauvegardeGestion getSave()
+    {
+        if (save == null)
+        {   save = new SauvegardeGestion();
+        }
+        return save;
+    }
+
     /**
      * Charge une partie selon le niveau choisie
      * @param niveau
@@ -46,7 +62,7 @@ public class SauvegardeGestion {
      * @return Tableau avec les parametres d'une partie
      */
     private int[] lectureParametreNiveau(int niveau){
-        int[] param = new int[10];
+        int[] param = new int[5];
         try{
             FileReader fr = new FileReader("ressources/Niveaux/niveau"+niveau+".txt");
             BufferedReader br = new BufferedReader(fr);
