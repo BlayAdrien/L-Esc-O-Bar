@@ -1,6 +1,12 @@
 package Modele;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 public class SauvegardeGestion {
 
@@ -65,12 +71,12 @@ public class SauvegardeGestion {
 
             FileOutputStream file = new FileOutputStream
                     (new File("partie"+partie.getNiveau()+".ser"));
-            ObjectOutputStream out = new ObjectOutputStream
+            ObjectOutputStream outFile = new ObjectOutputStream
                     (file);
 
-            out.writeObject(partie);
+            outFile.writeObject(partie);
 
-            out.close();
+            outFile.close();
             file.close();
 
         } catch (Exception e) {

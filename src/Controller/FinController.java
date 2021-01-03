@@ -1,6 +1,5 @@
 package Controller;
 
-import Modele.Partie;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,7 +24,7 @@ public class FinController implements Initializable {
     @FXML
     private Label score;
 
-    public Button closeButton;
+	public Button closeButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -40,6 +39,14 @@ public class FinController implements Initializable {
         Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
        	stage.setScene(Scene);
         stage.show();
+    }
+
+	@FXML
+    private void accueil(ActionEvent event) throws IOException {
+		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+		Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/Accueil.fxml")));
+		stage.setScene(Scene);
+		stage.show();
     }
 
     @FXML

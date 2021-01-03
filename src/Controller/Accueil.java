@@ -64,7 +64,6 @@ public class Accueil {
         Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
        	stage.setScene(Scene);
         stage.show();
-
     }
 
 	@FXML

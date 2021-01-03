@@ -71,28 +71,28 @@ public class choixNiveauxController implements Initializable {
      */
     public void clicNiveau(ActionEvent event) throws IOException {
         Button select = (Button) event.getSource();
-        Scene Scene;
+        Scene scene;
         Stage stage;
         switch (select.getId()){
             case "niveau1" :
                 stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 Main.p = Main.save.charger(1);
-                Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
-                stage.setScene(Scene);
+                scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
+                stage.setScene(scene);
                 stage.show();
                 break;
             case "niveau2" :
                 stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 Main.p = Main.save.charger(2);
-                Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
-                stage.setScene(Scene);
+                scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
+                stage.setScene(scene);
                 stage.show();
                 break;
             case "niveau3" :
                 stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 Main.p = Main.save.charger(3);
-                Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
-                stage.setScene(Scene);
+                scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
+                stage.setScene(scene);
                 stage.show();
                 break;
         }
