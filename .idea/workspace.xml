@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac70177-d64f-479a-888b-f34df3298232" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Documentation/Diagrammes.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/Doc diverse.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentation/Diagramme.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentation/Diagrammes_Esc_o_bar.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609709277380</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Version Finale">
+      <created>1609777660326</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609777660326</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -160,7 +165,8 @@
     <MESSAGE value="Resolution erreur" />
     <MESSAGE value="Niveau suivant" />
     <MESSAGE value="parametres" />
-    <option name="LAST_COMMIT_MESSAGE" value="parametres" />
+    <MESSAGE value="Version Finale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version Finale" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
