@@ -33,10 +33,6 @@ public class Cocktail extends Boisson{
 
     }
 
-    public void test(){
-        System.out.println("teste");
-    }
-
     /**
      * Ajoute un ingrédient à la fin de la liste d'ingrédients
      * @param ingredient

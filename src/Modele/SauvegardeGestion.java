@@ -50,8 +50,7 @@ public class SauvegardeGestion {
                     System.out.println("La deserialisation a foiré ");
                     e.printStackTrace();
                     int[] param = lectureParametreNiveau(niveau);
-                    partie = new Partie(param[0],niveau);
-                    partie.setScoreAAtteindre(param[1]);
+                    partie = new Partie(param[0],niveau,param[1]);
                     partie.getCommande().setNbBoissonMax(param[2]);
 
                 }

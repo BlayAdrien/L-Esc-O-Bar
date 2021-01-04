@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac70177-d64f-479a-888b-f34df3298232" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Documentation/Diagramme.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/Diagrammes_Esc_o_bar.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modele/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609777660326</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Version Finale (Changement Score a Atteindre)">
+      <created>1609778150363</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609778150363</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -166,7 +175,8 @@
     <MESSAGE value="Niveau suivant" />
     <MESSAGE value="parametres" />
     <MESSAGE value="Version Finale" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Finale" />
+    <MESSAGE value="Version Finale (Changement Score a Atteindre)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version Finale (Changement Score a Atteindre)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,7 +1,5 @@
 package Modele;
 
-import java.util.Objects;
-
 public class Ingredient {
 
     public enum TypeIngredient{
