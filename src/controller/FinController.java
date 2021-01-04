@@ -31,6 +31,9 @@ public class FinController implements Initializable {
 
     }
 
+    /*
+     * Va permettre de relancer la fenetre InterfaceJeu
+     */
 	@FXML
     void rejouer(ActionEvent event) throws IOException {
 		Main.save.sauvegarder(Main.p);
@@ -41,6 +44,9 @@ public class FinController implements Initializable {
         stage.show();
     }
 
+	/*
+	 * Va revenir sur la page d'accueil.
+	 */
 	@FXML
     private void accueil(ActionEvent event) throws IOException {
 		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
@@ -49,6 +55,9 @@ public class FinController implements Initializable {
 		stage.show();
     }
 
+	/*
+	 * Va quitter l'application.
+	 */
     @FXML
     private void quitter(ActionEvent event) {
 		Main.save.sauvegarder(Main.p);

@@ -34,6 +34,10 @@ public class FinControllerVictoire implements Initializable {
 
     }
 
+    /*
+     * Au clic va relancer la page InterfaceJeu.
+     */
+
     @FXML
     void rejouer(ActionEvent event) throws IOException {
         Main.save.sauvegarder(Main.p);
@@ -43,6 +47,10 @@ public class FinControllerVictoire implements Initializable {
         stage.setScene(Scene);
         stage.show();
     }
+
+    /*
+     * Va permettre de passer au niveau suivant ou precedent si déja niveau 3
+     */
 
     @FXML
     void niveauSuivant(ActionEvent event) throws IOException {
@@ -59,6 +67,10 @@ public class FinControllerVictoire implements Initializable {
         stage.show();
     }
 
+
+    /*
+     * Au clic va retourner sur la page Accueil.
+     */
     @FXML
     private void accueil(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
@@ -67,6 +79,9 @@ public class FinControllerVictoire implements Initializable {
         stage.show();
     }
 
+    /*
+     * Va quitter l'application.
+     */
     @FXML
     private void quitter(ActionEvent event) {
         Main.save.sauvegarder(Main.p);

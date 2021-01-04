@@ -31,15 +31,25 @@ public class Accueil {
 	private Locale locale;
 	public Button closeButton;
 
+	/*
+	 * En cliquant sur le bouton EN, cela va permettre de passer la langue en Anglais
+	 */
 	@FXML
 	private void btnEn(ActionEvent event){
 		loadLang("en");
 	}
-
+	/*
+	 * 	 * En cliquant sur le bouton FR, cela va permettre de passer la langue en francais
+	 */
 	@FXML
 	private void btnFr(ActionEvent event){
 		loadLang("fr");
 	}
+
+	/*
+	 * Va permettre de traduire l'application
+	 */
+
 
 	@FXML
 	private void loadLang(String lang){
@@ -51,12 +61,20 @@ public class Accueil {
 		quit.setText(bundle.getString("quit"));
 	}
 
+	/*
+	 * Permet de fermer l'application lors du clic sur le bouton quitter
+	 *
+	 */
 	@FXML
     private void quittez() {
 		Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
 
+	/*
+	 * Lors du clic sur jouer, va envoyer sur InterfaceJeu
+	 *
+	 */
 	@FXML
 	private void jouer(ActionEvent event) throws IOException {
 		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
@@ -65,6 +83,11 @@ public class Accueil {
        	stage.setScene(Scene);
         stage.show();
     }
+
+	/*
+	 * Lors du clic sur relge du jeu va ouvrir une nouvelle fenetre avec les regles du jeu.
+	 *
+	 */
 
 	@FXML
     private void regleDuJeu() throws IOException {
@@ -76,6 +99,11 @@ public class Accueil {
         newFenetre.show();
     }
 
+
+	/*
+	 * En cliquant sur niveaux, va ouvrir la page niveaux.
+	 *
+	 */
 	@FXML
 	private void choixNiveau(ActionEvent event) throws IOException {
 		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();

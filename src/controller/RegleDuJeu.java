@@ -33,6 +33,10 @@ public class RegleDuJeu {
 		loadLang("fr");
 	}
 
+	/*
+	 * Va permettre de modifier la langue de l'application.
+	 */
+
 	@FXML
 	private void loadLang(String lang){
 		locale = new Locale(lang);
