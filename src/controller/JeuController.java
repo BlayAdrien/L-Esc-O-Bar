@@ -1,7 +1,7 @@
-package Controller;
+package controller;
 
-import Modele.*;
-import Vue.Toast;
+import modele.*;
+import vue.Toast;
 import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
@@ -411,7 +411,7 @@ public class JeuController implements Initializable {
             case "shaker" :
                 if (Main.p.isEnPreparation()){
                     cocktail = Main.p.getCommandeEnCours().searchCocktail();
-                    Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/Shaker.fxml")));
+                    Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/Shaker.fxml")));
                     Stage newFenetre = new Stage();
                     newFenetre.setScene(Scene);
                     newFenetre.initOwner(Main.getPrimaryStage());
@@ -487,7 +487,7 @@ public class JeuController implements Initializable {
                             Scene Scene;
                             if (Main.p.getScore() < Main.p.getScoreAAtteindre()){
                                 try {
-                                    Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/FinDefaite.fxml")));
+                                    Scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/FinDefaite.fxml")));
                                     Stage stage = (Stage) biereBlonde.getScene().getWindow();
                                     stage.setScene(Scene);
                                     stage.show();
@@ -500,7 +500,7 @@ public class JeuController implements Initializable {
                             }
                             else{
                                 try {
-                                    Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/FinVictoire.fxml")));
+                                    Scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/FinVictoire.fxml")));
                                     Stage stage = (Stage) biereBlonde.getScene().getWindow();
                                     stage.setScene(Scene);
 

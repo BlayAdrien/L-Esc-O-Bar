@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac70177-d64f-479a-888b-f34df3298232" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Cocktail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Cocktail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/Partie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/SauvegardeGestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/choixNiveauxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ChoixNiveauxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vue/ChoixNiveau.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/ChoixNiveau.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609778150363</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Version Finale">
+      <created>1609779246039</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609779246039</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -174,9 +178,9 @@
     <MESSAGE value="Resolution erreur" />
     <MESSAGE value="Niveau suivant" />
     <MESSAGE value="parametres" />
-    <MESSAGE value="Version Finale" />
     <MESSAGE value="Version Finale (Changement Score a Atteindre)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Finale (Changement Score a Atteindre)" />
+    <MESSAGE value="Version Finale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version Finale" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

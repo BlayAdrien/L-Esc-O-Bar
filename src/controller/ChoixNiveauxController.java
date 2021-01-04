@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class choixNiveauxController implements Initializable {
+public class ChoixNiveauxController implements Initializable {
 
 
     @Override
@@ -59,7 +59,7 @@ public class choixNiveauxController implements Initializable {
 	@FXML
     private void retourAccueil(ActionEvent event) throws IOException {
 		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-		Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/Accueil.fxml")));
+		Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/Accueil.fxml")));
 		stage.setScene(Scene);
 		stage.show();
     }
@@ -77,21 +77,21 @@ public class choixNiveauxController implements Initializable {
             case "niveau1" :
                 stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 Main.p = Main.save.charger(1);
-                scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
+                scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/InterfaceJeu.fxml")));
                 stage.setScene(scene);
                 stage.show();
                 break;
             case "niveau2" :
                 stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 Main.p = Main.save.charger(2);
-                scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
+                scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/InterfaceJeu.fxml")));
                 stage.setScene(scene);
                 stage.show();
                 break;
             case "niveau3" :
                 stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 Main.p = Main.save.charger(3);
-                scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
+                scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/InterfaceJeu.fxml")));
                 stage.setScene(scene);
                 stage.show();
                 break;

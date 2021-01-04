@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="464.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RegleDuJeu">
+<ScrollPane prefHeight="464.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegleDuJeu">
      <content>
             <VBox>
                <children>
@@ -27,7 +27,7 @@
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Controller/img/fleche.jpg" />
+                              <Image url="@../controller/img/fleche.jpg" />
                            </image>
                         </ImageView>
                      </graphic>

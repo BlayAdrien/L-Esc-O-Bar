@@ -1,10 +1,8 @@
 package sample;
 
-import Modele.Partie;
-import Modele.SauvegardeGestion;
+import modele.Partie;
+import modele.SauvegardeGestion;
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,7 +18,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("../Vue/Accueil.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../vue/Accueil.fxml"));
             primaryStage.setTitle("L'Esc O Bar");
             primaryStage.setScene(new Scene(root));
 

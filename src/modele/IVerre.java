@@ -1,4 +1,4 @@
-package Modele;
+package modele;
 
 public interface IVerre {
     boolean verifVerre();

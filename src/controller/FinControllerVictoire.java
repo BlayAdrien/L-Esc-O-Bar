@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -39,7 +39,7 @@ public class FinControllerVictoire implements Initializable {
         Main.save.sauvegarder(Main.p);
         Main.p = Main.save.charger(Main.p.getNiveau());
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
+        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/InterfaceJeu.fxml")));
         stage.setScene(Scene);
         stage.show();
     }
@@ -54,7 +54,7 @@ public class FinControllerVictoire implements Initializable {
             Main.p = Main.save.charger(Main.p.getNiveau() +1);
         }
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
+        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/InterfaceJeu.fxml")));
         stage.setScene(Scene);
         stage.show();
     }
@@ -62,7 +62,7 @@ public class FinControllerVictoire implements Initializable {
     @FXML
     private void accueil(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/Accueil.fxml")));
+        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/Accueil.fxml")));
         stage.setScene(Scene);
         stage.show();
     }

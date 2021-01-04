@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -61,14 +61,14 @@ public class Accueil {
 	private void jouer(ActionEvent event) throws IOException {
 		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
 		Main.p = Main.save.charger(1);
-        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/InterfaceJeu.fxml")));
+        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/InterfaceJeu.fxml")));
        	stage.setScene(Scene);
         stage.show();
     }
 
 	@FXML
     private void regleDuJeu() throws IOException {
-        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/RegleDuJeu.fxml")));
+        Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/RegleDuJeu.fxml")));
         Stage newFenetre = new Stage();
         newFenetre.setScene(Scene);
         newFenetre.initOwner(Main.getPrimaryStage());
@@ -80,7 +80,7 @@ public class Accueil {
 	private void choixNiveau(ActionEvent event) throws IOException {
 		Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
 
-		Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/Vue/ChoixNiveau.fxml")));
+		Scene Scene = new Scene(FXMLLoader.load(getClass().getResource("/vue/ChoixNiveau.fxml")));
 		stage.setScene(Scene);
 		stage.show();
 	}

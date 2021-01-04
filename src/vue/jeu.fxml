@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1144.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.JeuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1144.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JeuController">
    <children>
       <Label fx:id="tpsPartie" layoutX="973.0" layoutY="100.0" prefHeight="92.0" prefWidth="165.0">
          <font>
@@ -29,31 +29,31 @@
          <children>
             <ImageView fx:id="biereBlonde" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Controller/img/biere_blonde.jpg" />
+                  <Image url="@../controller/img/biere_blonde.jpg" />
                </image>
             </ImageView>
             <ImageView fx:id="biereBrune" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Controller/img/biere_brune.jpg" />
+                  <Image url="@../controller/img/biere_brune.jpg" />
                </image>
             </ImageView>
             <ImageView fx:id="soda" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Controller/img/soda.jpg" />
+                  <Image url="@../controller/img/soda.jpg" />
                </image>
             </ImageView>
             <ImageView fx:id="cocktail" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#setOnCliked" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Controller/img/mojito.jpg" />
+                  <Image url="@../controller/img/mojito.jpg" />
                </image>
             </ImageView>
             <ImageView fx:id="verreBiere" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#clicVerre"  pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Controller/img/verre-biere.jpg" />
+                  <Image url="@../controller/img/verre-biere.jpg" />
                </image></ImageView>
             <ImageView fx:id="verreCocktail" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#clicVerre" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Controller/img/verre-cocktail.jpg" />
+                  <Image url="@../controller/img/verre-cocktail.jpg" />
                </image></ImageView>
          </children>
       </HBox>
