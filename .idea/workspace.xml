@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac70177-d64f-479a-888b-f34df3298232" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Documentation/Diagrammes.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/Doc diverse.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/Niveaux/niveau3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Niveaux/niveau3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/InterfaceJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Diagramme.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Diagrammes_Esc_o_bar.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609703767874</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="parametres">
+      <created>1609709277380</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609709277380</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -152,7 +159,8 @@
     <MESSAGE value="test push" />
     <MESSAGE value="Resolution erreur" />
     <MESSAGE value="Niveau suivant" />
-    <option name="LAST_COMMIT_MESSAGE" value="Niveau suivant" />
+    <MESSAGE value="parametres" />
+    <option name="LAST_COMMIT_MESSAGE" value="parametres" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
